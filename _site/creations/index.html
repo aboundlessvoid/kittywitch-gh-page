@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>kittywitch</title>
+		<meta name="description" content="the world is a beautiful cat">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="kittywitch">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+@font-face {
+	font-family: PirateOne;
+	src: url('/PirataOne-Regular.ttf');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: IMFellDWPica;
+	src: url('/IMFellDWPica-Regular.ttf');
+	font-display: swap;
+}
+
+/* Defaults */
+:root {
+	--font-family: IMFellDWPica, -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #74569b;
+	--alternating-background-color: #76638F;
+
+	--text-color: var(--color-gray-20);
+	--text-color-link: #F0ECF4;
+	--text-color-link-active: #EBE5F0;
+	--text-color-link-visited: #EBE5F0;
+
+	--syntax-tab-size: 2;
+}
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background: repeating-linear-gradient(var(--background-color), var(--background-color) 3px, var(--alternating-background-color) 3px, var(--alternating-background-color) 6px);
+	/* background-color: var(--background-color); */
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	font-size: 1.25rem;
+	max-width: 40em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: PirateOne;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header, main {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+.base-container {
+	margin: 1rem 0;
+	background-color: var(--background-color);
+	border: 2px solid var(--color-gray-20);
+	border-radius: 0.5rem;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	font-family: PirateOne;
+	font-size: 2em; /* 16px /16 */
+	font-weight: 700;
+
+}
+.home-link:hover {
+	transition: all 0.5s;
+	background-image: linear-gradient(90deg, #FFADAD , #ffd6a5 14%, #fdffb6 29%, #caffbf 43%, #9bf6ff 57%, #a0c4ff 71%, #bdb2ff 86%, #ffc6ff 100%); 
+	background-clip: text; 
+	-webkit-background-clip: text; 
+	-webkit-text-fill-color: transparent; 
+
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	flex-wrap: wrap;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--text-color);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+.postlist-description {
+	margin: 0;
+	flex-basis: 100%;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
+.infocard {
+	border: solid 2px white;
+	border-radius: 5px;
+	max-width: 20em;
+	padding: 1rem;
+	background-color: var(--alternating-background-color);
+}
+
+/* info card */
+.infocard-item {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em;
+}
+
+.infocard-item-key {
+	align-self: flex-end;
+}
+
+.infocard-item-divider {
+	flex-grow: 1;
+	border-bottom: dotted 2px white;
+	min-width: .5em;
+	margin-bottom: 0.25rem;
+}
+
+.infocard-item-value {
+	align-self: flex-end;
+	text-align: end;
+}
+
+.redacted {
+	margin-left: -0.7rem;
+  	padding: 0 0.2rem;
+	background-color: #fff;
+	color: #74569b;
+	transform: rotate(-7deg);
+	display: inline-block; 
+}
+
+/** gallery */
+
+.gallery {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 1.25rem 0.75rem;
+	justify-content: space-around;
+}
+
+.gallery-img {
+	border: #fff 1px solid;
+	border-radius: 4px;
+
+	display: block;
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<div class="base-container">
+			<header>
+				<a href="/" class="home-link">kittywitch</a>
+				<nav>
+					<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+					<ul class="nav">
+						<li class="nav-item"><a href="/">home</a></li>
+						<li class="nav-item"><a href="/archive/">all posts</a></li>
+						<li class="nav-item"><a href="/thoughts/">thoughts</a></li>
+						<li class="nav-item"><a href="/creations/" aria-current="page">creations</a></li>
+						<li class="nav-item"><a href="/sillies/">sillies</a></li>
+						<li class="nav-item"><a href="/about/">about</a></li>
+						<li class="nav-item"><a href="/feed/feed.xml">feed</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<main id="main">
+				<heading-anchors>
+					
+<h1 id="creations">creations</h1>
+
+<p>in case i ever feel happy enough to show off something i made.</p>
+
+
+<ol reversed="" class="postlist" style="--postlist-index: NaN">
+</ol>
+
+
+				</heading-anchors>
+			</main>
+
+			<footer>
+				<p>
+					<em>Built with <a href="https://www.11ty.dev/">Eleventy v3.1.2</a></em>
+				</p>
+			</footer>
+		<div>
+
+		<!-- This page `/creations/` was built on 2025-10-16T15:31:44.801Z -->
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</div></div></body>
+</html>

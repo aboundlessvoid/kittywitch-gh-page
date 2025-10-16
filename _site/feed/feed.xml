@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="pretty-atom-feed.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>kittywitch</title>
+  <subtitle>meow</subtitle>
+  <link href="https://kittywitch.space/feed/feed.xml" rel="self" />
+  <link href="https://kittywitch.space/" />
+  <updated>2025-10-15T00:00:00Z</updated>
+  <id>https://kittywitch.space/</id>
+  <author>
+    <name>kittywitch</name>
+  </author>
+  <entry>
+    <title>webbed site - now with less content</title>
+    <link href="https://kittywitch.space/blog/2025_10_15_lets_go/" />
+    <updated>2025-10-15T00:00:00Z</updated>
+    <id>https://kittywitch.space/blog/2025_10_15_lets_go/</id>
+    <content type="html">&lt;p&gt;this website has been online in a state of &lt;em&gt;nothing&#39;s here yet, but it&#39;s online and kind of styled&lt;/em&gt; for a while now and i&#39;m aiming to change that. first step: getting rid of the placeholder test posts that were just there to show off everything works on a technical level. second step: actually add something of interest: &lt;strong&gt;oh_no.jpg&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;so this is a short update post to say that there&#39;s less here now - yippee!&lt;/p&gt;
+&lt;p&gt;but there&#39;s also more: i added a section for &lt;a href=&quot;https://kittywitch.space/sillies/&quot;&gt;silly after-work selfies&lt;/a&gt; that might tickle you, even if it&#39;s not very interesting. more to follow, maybe. hopefully.&lt;/p&gt;
+</content>
+  </entry>
+</feed>
