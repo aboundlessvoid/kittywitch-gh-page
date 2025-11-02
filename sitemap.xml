@@ -59,8 +59,36 @@
 	
 		
 		<url>
+			<loc>https://kittywitch.space/reviews/test_review%20copy/</loc>
+			<lastmod>2025-10-15</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://kittywitch.space/reviews/test_review/</loc>
+			<lastmod>2025-10-15</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://kittywitch.space/reviews/</loc>
+			<lastmod>2025-10-19</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://kittywitch.space/blog/2025_11_02_xenoblade_silksong/</loc>
+			<lastmod>2025-11-02</lastmod>
+		</url>
+	
+	
+		
+		<url>
 			<loc>https://kittywitch.space/feed/feed.xml</loc>
-			<lastmod>2025-10-16</lastmod>
+			<lastmod>2025-11-02</lastmod>
 		</url>
 	
 </urlset>

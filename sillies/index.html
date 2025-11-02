@@ -22,6 +22,45 @@
 	font-display: swap;
 }
 
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 100 700;
+  src: url(https://fonts.gstatic.com/icon/font?kit=kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsL7DLI5eGLov98zWsgTge7EJQ&skey=b8dc2088854b122f&v=v290) format('woff2');
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -moz-font-feature-settings: 'liga';
+  -moz-osx-font-smoothing: grayscale;
+
+  margin-right: -4px;
+
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.symbol-filled {
+	font-variation-settings:
+  'FILL' 1,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 24
+} 
+
 /* Defaults */
 :root {
 	--font-family: IMFellDWPica, -apple-system, system-ui, sans-serif;
@@ -139,6 +178,15 @@ main :first-child {
 
 header, main {
 	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+figure {
+	margin: 0;
+}
+
+figcaption {
+	text-align: center;
+	font-style: italic;
 }
 
 #skip-link {
@@ -387,6 +435,52 @@ header {
 	border-radius: 4px;
 
 	display: block;
+}
+
+/** reviews */
+
+.review-header {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+
+	border-top: 1px dashed var(--color-gray-20);
+	border-bottom: 1px dashed var(--color-gray-20);
+	padding: 0.5rem 0;
+}
+
+.review-data {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 2rem;
+	justify-content: start;
+
+	flex-grow: 1;
+}
+
+.review-data-key {
+	margin-bottom: 0.5rem;
+}
+
+.review-data-value {
+	margin-top: 0.5rem;
+}
+
+.review-cover-container {
+	flex-shrink: 0;
+}
+
+.review-cover {
+	height: 120px;
+
+	border: #fff 1px solid;
+	border-radius: 4px;
+
+	display: block;
+}
+
+.postlist-heading {
+	display: inline;
 }</style>
 		
 	</head>
@@ -423,123 +517,123 @@ header {
 
 <section class="gallery">
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250107-WA0001.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250107-WA0001.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250110-WA0003.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250110-WA0003.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250115-WA0001.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250115-WA0001.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250122-WA0002.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250122-WA0002.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250124-WA0006.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250124-WA0006.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250127-WA0004.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250127-WA0004.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250205-WA0001.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250205-WA0001.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250211-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250211-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250214-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250214-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250219-WA0003.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250219-WA0003.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250326-WA0006.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250326-WA0006.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250401-WA0003.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250401-WA0003.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250407-WA0004.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250407-WA0004.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250408-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250408-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250414-WA0006.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250414-WA0006.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250415-WA0001.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250415-WA0001.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250416-WA0001.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250416-WA0001.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250505-WA0001.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250505-WA0001.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250506-WA0002.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250506-WA0002.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250513-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250513-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250515-WA0005.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250515-WA0005.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250519-WA0004.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250519-WA0004.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250603-WA0004.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250603-WA0004.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250605-WA0005.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250605-WA0005.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250610-WA0002.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250610-WA0002.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250612-WA0002.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250612-WA0002.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250612-WA0009.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250612-WA0009.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250616-WA0001.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250616-WA0001.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250624-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250624-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250627-WA0001.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250627-WA0001.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250630-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250630-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250702-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250702-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250708-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250708-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250714-WA0002.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250714-WA0002.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250723-WA0003.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250723-WA0003.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250728-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250728-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250801-WA0002.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250801-WA0002.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250804-WA0001.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250804-WA0001.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250805-WA0004.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250805-WA0004.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250807-WA0002.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250807-WA0002.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250808-WA0003.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250808-WA0003.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250812-WA0004.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250812-WA0004.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250813-WA0001.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250813-WA0001.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250815-WA0005.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250815-WA0005.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250818-WA0004.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250818-WA0004.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250821-WA0035.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250821-WA0035.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250825-WA0004.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250825-WA0004.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250826-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250826-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250902-WA0002.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250902-WA0002.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250904-WA0002.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250904-WA0002.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250908-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250908-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250909-WA0002.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250909-WA0002.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250915-WA0006.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250915-WA0006.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250917-WA0003.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250917-WA0003.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250919-WA0002.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250919-WA0002.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250923-WA0001.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250923-WA0001.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20250926-WA0005.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20250926-WA0005.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20251013-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20251013-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
-        <div class="gallery-item"><img class="gallery-img" src="..\sillies\IMG-20251014-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
+        <div class="gallery-item"><img class="gallery-img" src="../../sillies/IMG-20251014-WA0000.png" alt="a selfie of a white person, wearing either headphones or a helmet, making an odd expression. the photo is edited to be colorized into a monochrome purple-ish color palette."></div>
     
 </section>
 
@@ -553,7 +647,7 @@ header {
 			</footer>
 		<div>
 
-		<!-- This page `/sillies/` was built on 2025-10-16T15:31:44.802Z -->
+		<!-- This page `/sillies/` was built on 2025-11-02T13:27:31.114Z -->
 		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
 	</div></div></body>
 </html>
