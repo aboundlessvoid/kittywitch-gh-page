@@ -360,7 +360,6 @@ header {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	text-transform: capitalize;
 	font-style: italic;
 }
 .postlist-item > .post-tag {
@@ -481,6 +480,10 @@ header {
 
 .postlist-heading {
 	display: inline;
+}
+
+.reviewlist-item:not(:last-child) {
+	margin-bottom: 1rem;
 }</style>
 		
 	</head>
@@ -495,6 +498,7 @@ header {
 					<ul class="nav">
 						<li class="nav-item"><a href="/">home</a></li>
 						<li class="nav-item"><a href="/archive/">all posts</a></li>
+						<li class="nav-item"><a href="/reviews/" aria-current="page">reviews</a></li>
 						<li class="nav-item"><a href="/thoughts/">thoughts</a></li>
 						<li class="nav-item"><a href="/creations/">creations</a></li>
 						<li class="nav-item"><a href="/sillies/">sillies</a></li>
@@ -507,16 +511,14 @@ header {
 			<main id="main">
 				<heading-anchors>
 					
-
 <h1 id="reviews">reviews</h1>
 
-<p>this is an overview of all review posts in all categories of the site.</p>
+<p>this is an overview of all reviews on the site.</p>
 
 
-<ol reversed="" class="reviewlist" style="--reviewlist-index: 3">
+<ol reversed="" class="reviewlist" style="--reviewlist-index: 2">
 	<li class="reviewlist-item">
-		<a href="/reviews/test_review/" class="postlist-link"><h2 class="postlist-heading" id="nier-automata">nier: automata</h2></a>
-		
+		<a href="/reviews/mistborn_the_final_empire/" class="postlist-link"><h2 class="postlist-heading" id="mistborn-the-final-empire-book">mistborn / the final empire (book)</h2></a>
 		
 		
 		
@@ -526,55 +528,20 @@ header {
     <div class="review-data">
         <div>
             <p class="review-data-key"><b>rating</b></p>
-            <p class="review-data-value"><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined symbol-filled">star</span></p>
+            <p class="review-data-value"><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined">star</span></p>
         </div>
         <div>
             <p class="review-data-key"><b>date</b></p>
-            <p class="review-data-value">15 october 2025</p>
+            <p class="review-data-value">04 november 2025</p>
         </div>
         <div>
             <p class="review-data-key"><b>genre</b></p>
-            <p class="review-data-value">action, jrpg</p>
+            <p class="review-data-value">fantasy</p>
         </div>
-        <div>
-            <p class="review-data-key"><b>other</b></p>
-            <p class="review-data-value">played on pc</p>
-        </div>
+        
     </div>
     <div class="review-cover-container">
-        <img class="review-cover" src="/img/nier.png">
-    </div>
-</div>
-	</li>
-	<li class="reviewlist-item">
-		<a href="/reviews/test_review copy/" class="postlist-link"><h2 class="postlist-heading" id="nier-automata-2">nier: automata</h2></a>
-		
-		
-		
-		
-		
-		
-		<div class="review-header">
-    <div class="review-data">
-        <div>
-            <p class="review-data-key"><b>rating</b></p>
-            <p class="review-data-value"><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined symbol-filled">star</span></p>
-        </div>
-        <div>
-            <p class="review-data-key"><b>date</b></p>
-            <p class="review-data-value">15 october 2025</p>
-        </div>
-        <div>
-            <p class="review-data-key"><b>genre</b></p>
-            <p class="review-data-value">action, jrpg</p>
-        </div>
-        <div>
-            <p class="review-data-key"><b>other</b></p>
-            <p class="review-data-value">played on pc</p>
-        </div>
-    </div>
-    <div class="review-cover-container">
-        <img class="review-cover" src="/img/nier.png">
+        <img class="review-cover" src="/img/mistborn.png">
     </div>
 </div>
 	</li>
@@ -592,7 +559,7 @@ header {
 			</footer>
 		<div>
 
-		<!-- This page `/reviews/` was built on 2025-11-02T13:27:31.114Z -->
+		<!-- This page `/reviews/` was built on 2025-11-04T21:57:45.995Z -->
 		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
 	</div></div></body>
 </html>
