@@ -80,8 +80,29 @@
 	
 		
 		<url>
+			<loc>https://kittywitch.space/log_2025/</loc>
+			<lastmod>2025-11-16</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://kittywitch.space/log/</loc>
+			<lastmod>2025-11-16</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://kittywitch.space/reviews/lost_in_transit/</loc>
+			<lastmod>2025-11-23</lastmod>
+		</url>
+	
+	
+		
+		<url>
 			<loc>https://kittywitch.space/feed/feed.xml</loc>
-			<lastmod>2025-11-04</lastmod>
+			<lastmod>2025-11-23</lastmod>
 		</url>
 	
 </urlset>
