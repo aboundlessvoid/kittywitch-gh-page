@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>kittywitch</title>
-		<meta name="description" content="the world is a beautiful cat">
+		<title>christmas vacation gaming bonanza • kittywitch</title>
+		<meta name="description" content="forcing myself to play shorter video games by making a list to work through.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="kittywitch">
 		
 		
@@ -485,6 +485,174 @@ header {
 
 .reviewlist-item:not(:last-child) {
 	margin-bottom: 1rem;
+}
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
 }</style>
 		
 	</head>
@@ -502,7 +670,7 @@ header {
 						<li class="nav-item"><a href="/reviews/">reviews</a></li>
 						<li class="nav-item"><a href="/thoughts/">thoughts</a></li>
 						<li class="nav-item"><a href="/creations/">creations</a></li>
-						<li class="nav-item"><a href="/log/" aria-current="page">log</a></li>
+						<li class="nav-item"><a href="/log/">log</a></li>
 						<li class="nav-item"><a href="/sillies/">sillies</a></li>
 						<li class="nav-item"><a href="/about/">about</a></li>
 						<li class="nav-item"><a href="/feed/feed.xml">feed</a></li>
@@ -513,9 +681,34 @@ header {
 			<main id="main">
 				<heading-anchors>
 					
-<h1 id="log">log</h1>
 
-<p><a href="/log_2025">2025</a></p>
+
+<h1 id="christmas-vacation-gaming-bonanza">christmas vacation gaming bonanza</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2025-12-15">15 december 2025</time></li>
+	<li><a href="/tags/thoughts/" class="post-tag">thoughts</a>, </li>
+	<li><a href="/tags/games/" class="post-tag"> games</a></li>
+</ul>
+
+<p>for the last few years, i've been gravitating towards BIG video games. the 100 hour JRPGs that consume your life for several months. that meant that a lot of interesting titles that i wishlisted or even bought fell by the wayside. i want to change this and because i'm extra like that, i compiled a list of 10 games mostly shorter than 5 hours (2 of them are estimated at 6 and 7 hours respectively, shhh) to tackle during my 2 weeks off around christmas and new years. it's a bit optimistic of me to think that i can make it through the entire list in that time, so maybe it will be a christmas-holiday-and-january endeavor, but that's fine. for some bonus motivation i'm also posting the list here and maybeee i will also do reviews of the games on the site - but since it's a lot of games in a short time, maybe very bite-sized ones, we'll see.</p>
+<h2 id="the-list">~~ the list ~~</h2>
+<ol>
+<li>mouthwashing</li>
+<li>who's lila</li>
+<li>despelote</li>
+<li>crow country</li>
+<li>umurangi generation</li>
+<li>haven park</li>
+<li>no longer home</li>
+<li>consume me</li>
+<li>mediterranea inferno</li>
+<li>firewatch</li>
+</ol>
+<p>all of these are indies, but some of them are pretty big titles in terms of popularity and some of them are more niche. there's a nice spread of genres here too (although i'm starting off with a horror double feature). excited to tackle some of my backlog!! (and also to pay some more money for titles i don't own yet lmao)</p>
+
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/2025_11_02_xenoblade_silksong/">hollow xenoblade: silksong (definitive edition)</a></li>
+</ul>
 
 				</heading-anchors>
 			</main>
@@ -527,7 +720,7 @@ header {
 			</footer>
 		<div>
 
-		<!-- This page `/log/` was built on 2025-12-15T19:34:42.846Z -->
+		<!-- This page `/blog/2025_12_15_christmas_gaming_bonanza/` was built on 2025-12-15T19:34:42.846Z -->
 		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
 	</div></div></body>
 </html>
