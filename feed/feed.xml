@@ -2,28 +2,28 @@
 <?xml-stylesheet href="pretty-atom-feed.xsl" type="text/xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   
-  <title>Blog Title</title>
-  <subtitle>This is a longer description about your blog.</subtitle>
-  <link href="https://example.com/feed/feed.xml" rel="self" />
-  <link href="https://example.com/" />
+  <title>kittywitch</title>
+  <subtitle>meow</subtitle>
+  <link href="https://kittywitch.space/feed/feed.xml" rel="self" />
+  <link href="https://kittywitch.space/" />
   <updated>2026-07-16T00:00:00Z</updated>
-  <id>https://example.com/</id>
+  <id>https://kittywitch.space/</id>
   <author>
-    <name>Your Name</name>
+    <name>kittywitch</name>
   </author>
   <entry>
     <title>summer daze</title>
-    <link href="https://example.com/lists/mixtapes/summer_daze/" />
+    <link href="https://kittywitch.space/lists/mixtapes/summer_daze/" />
     <updated>2026-07-16T00:00:00Z</updated>
-    <id>https://example.com/lists/mixtapes/summer_daze/</id>
+    <id>https://kittywitch.space/lists/mixtapes/summer_daze/</id>
     <content type="html">&lt;p&gt;originally created in 2017, slightly re-fangled later, here for your enjoyment in the summer of twentytwentysix. summery vibes, hazed out indie. has a companion tape with more synthy, melancholic summer songs.&lt;/p&gt;
 </content>
   </entry>
   <entry>
     <title>shadows of self</title>
-    <link href="https://example.com/log/books/shadows_of_self/" />
+    <link href="https://kittywitch.space/log/books/shadows_of_self/" />
     <updated>2026-02-09T00:00:00Z</updated>
-    <id>https://example.com/log/books/shadows_of_self/</id>
+    <id>https://kittywitch.space/log/books/shadows_of_self/</id>
     <content type="html">&lt;p&gt;there were some days now between me finishing &lt;em&gt;shadows of self&lt;/em&gt; and writing this review, on top of that the deeper i&#39;m into a specific series, the more difficult it gets for me to not repeat myself, so this will be a short one.&lt;/p&gt;
 &lt;!-- excerpt --&gt;
 &lt;p&gt;i had a better time with this book compared to &lt;em&gt;the alloy of law&lt;/em&gt;. the new cast had some time to settle in and these characters have more personality than any in the first era of mistborn had. i&#39;ve even come around on wayne, who&#39;s more than just an abrasive mischievous annoyance and gained some depth. this story is also intertwining more directly with the larger mytholygy and doesn&#39;t feel as much like a side story that happens to be set in the mistborn universe. sanderson is still great at writing well-earned plot twists and, as it turns out, comfortable enough to make - mediocre - dick jokes now. it&#39;s like he&#39;s slowly learning to loosen up but not quite there yet. i still miss the more epic high fantasy of the first era, but together with the interweaving of kandra lore and harmony directly communicating with characters, the crime thriller setting of this era does mostly work for me. had a good time and i&#39;m interested to see what this era builds up to.&lt;/p&gt;
@@ -31,9 +31,9 @@
   </entry>
   <entry>
     <title>negative space</title>
-    <link href="https://example.com/log/books/negative_space/" />
+    <link href="https://kittywitch.space/log/books/negative_space/" />
     <updated>2026-02-09T00:00:00Z</updated>
-    <id>https://example.com/log/books/negative_space/</id>
+    <id>https://kittywitch.space/log/books/negative_space/</id>
     <content type="html">&lt;p&gt;the setting of &lt;em&gt;negative space&lt;/em&gt; is bleak: a slowly decaying town in new hampshire, a suicide epidemic, disaffected teens, a hallucinogenic drug that may or may not have actual supernatural components to it. the book follows three teens in rapidly switching first-person POVs, jill, ahmir and lu, charting the trajectories of their own lives as well as how these intersect with tyler, the fourth major character of &lt;em&gt;negative space&lt;/em&gt;, whose point of view we are never privy to.&lt;/p&gt;
 &lt;!-- excerpt --&gt;
 &lt;p&gt;all four of these have their fair share of problems and they all cope in unhealthy ways. jill is in a tumultous relationship with tyler, ahmir also is sexually involved with tyler in a weirdly detached way, lu is a closeted trans girl in a controlling religious household and tyler collects bad coping, drug issues and self-harming behavior like he&#39;s trying to win a competition. lu aside, all of them have some kind of drug dependency going on. but it&#39;s especially pronounced with tyler, who&#39;s hooked on something called WHORL, which as far as i can tell best can be compared to salvia.&lt;/p&gt;
@@ -44,9 +44,9 @@
   </entry>
   <entry>
     <title>serious weakness</title>
-    <link href="https://example.com/log/books/serious_weakness/" />
+    <link href="https://kittywitch.space/log/books/serious_weakness/" />
     <updated>2026-01-22T00:00:00Z</updated>
-    <id>https://example.com/log/books/serious_weakness/</id>
+    <id>https://kittywitch.space/log/books/serious_weakness/</id>
     <content type="html">&lt;p&gt;i&#39;ve been rotating this book in my mind for days now (technically i only finished it yesterday, but i&#39;ve been actively seeking out other people&#39;s thoughts on it for a bit now and reflecting on it). where to even start? probably: if you ever want to read this, check the content warnings &lt;a href=&quot;https://app.thestorygraph.com/books/7f942c5a-793f-4708-91d1-280ed2ffe808/content_warnings&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://xrafstar.monster/stories/serious_weakness/&quot;&gt;here&lt;/a&gt;. there&#39;s one very graphic rape scene here on top of a lot of torture, violence and further sexual assault.&lt;/p&gt;
 &lt;!-- excerpt --&gt;
 &lt;p&gt;&lt;em&gt;serious weakness&lt;/em&gt; is a slimy, grimy oozing puddle of filth, piss, blood and cheap energy drinks. this is not meant to be jugdemental in one way or the other, it just sets the scene well i think. at the base of it, it&#39;s a road movie-ish story of two guys randomly meeting, both very stunted people in their own ways and one of them happens to be a murderer slash kidnapper slash art vandal (insul). it&#39;s a meet-cute where one guy (trianon) gets assaulted with a tennis racket. it&#39;s challenging and unsavory. it very graphically depicts a relationship of one guy taking another hostage, physically and sexually assaulting him and torturing him and yet it&#39;s also a love story, which given this context should only end up awful and offensive, yet it doesn&#39;t. there&#39;s a fucked up sensuality in very non-consensual things. it&#39;s gross. it works somehow? i find it very difficult to verbalize my thoughts and feelings about the book despite thinking about it quite a bit.&lt;/p&gt;
@@ -59,9 +59,9 @@
   </entry>
   <entry>
     <title>what feasts at night</title>
-    <link href="https://example.com/log/books/what_feasts_at_night/" />
+    <link href="https://kittywitch.space/log/books/what_feasts_at_night/" />
     <updated>2026-01-10T00:00:00Z</updated>
-    <id>https://example.com/log/books/what_feasts_at_night/</id>
+    <id>https://kittywitch.space/log/books/what_feasts_at_night/</id>
     <content type="html">&lt;p&gt;&lt;em&gt;what feasts at night&lt;/em&gt; is a sequel to &lt;em&gt;what moves the dead&lt;/em&gt;, which is a loose retelling of poe&#39;s &lt;em&gt;the fall of the house of usher&lt;/em&gt;, keeping the gothic horror and basic premise, but going wild on everything else from protagonist to resolution. the protagonist is alex easton, a retired non-binary soldier from the fictional eastern-ish european country of gallacia. &lt;em&gt;what moves the dead&lt;/em&gt; initially endeared me a lot with its handling of (gender) identity, going so far as establishing a peculiar but very interesting ruleset of personal pronouns in the ruritanian language which intersects well with easton&#39;s personal identity. where &lt;em&gt;dead&lt;/em&gt; was a re-telling of a classic gothic horror short story, &lt;em&gt;night&lt;/em&gt; has a wholly original plot, although it does heavily feature folkloristic horror, specifically the concept of a &lt;em&gt;moroi&lt;/em&gt; from romanian folklore (which shares &lt;em&gt;some&lt;/em&gt; similarities with a nachtmahr).&lt;/p&gt;
 &lt;!-- excerpt --&gt;
 &lt;p&gt;at the outset of the novella, easton is looking to spend some time at a hunting lodge their family owns, together with their close companion angus and british mycologist eugenia potter they met in the previous book (with some heavy romantic tension happening between her and angus). arriving at the lodge, the caretaker of the property appears to be missing and the place is somewhat in disrepair. asking around the nearby village, they quickly find out that the caretaker has passed away, but the locals are very guarded about the circumstances of his death. finding a replacement caretaker also proves difficult, as whatever befell the previous one has the villagers apprehensive about taking up residence at the hunting lodge. finally, an old widow together with her grandson take the job, mostly out of desperation and despite their misgivings about the place.&lt;/p&gt;
@@ -73,9 +73,9 @@
   </entry>
   <entry>
     <title>girl flesh</title>
-    <link href="https://example.com/log/books/girl_flesh/" />
+    <link href="https://kittywitch.space/log/books/girl_flesh/" />
     <updated>2026-01-10T00:00:00Z</updated>
-    <id>https://example.com/log/books/girl_flesh/</id>
+    <id>https://kittywitch.space/log/books/girl_flesh/</id>
     <content type="html">&lt;p&gt;&lt;em&gt;girl flesh&lt;/em&gt; describes itself as an extreme horror story about love. i suppose that this is an accurate one-sentence description of its mission statement and it mostly succeeds at being just that, despite being massively frustrating to me.&lt;/p&gt;
 &lt;!-- excerpt --&gt;
 &lt;p&gt;the novel follows angie, a successful writer (although when it&#39;s explained what she&#39;s writing it seems to be blogging about true crime, which makes it a bit hard for me to follow how she&#39;s financially successful with that. does anybody know of &lt;em&gt;bloggers&lt;/em&gt; in 2025 being financially successful?) and caro, an equally successful musician, who meet under the worst possible circumstances: they&#39;ve both been kidnapped and find themselves inside a dilapidated motel room in the middle of nowhere in northern texas. they successfully escape the room they&#39;re locked in and manage to escape the place by stealing a car when their kidnappers return to do whatever to them, despite getting injured in the process as the guys indiscriminately shoot at them during their escape. cue the most confused road trip i have ever witnessed. in their minds, every single person they come across has to somehow be in cahoots with the kidnappers slash serial killers after them and they keep getting proven correct. rural texas is an uncivilized hellhole where everybody is somehow evil and there&#39;s just endless highways in the middle of nowhere (which probably is partially correct but is played up to eleven here).&lt;/p&gt;
@@ -87,9 +87,9 @@
   </entry>
   <entry>
     <title>the alloy of law</title>
-    <link href="https://example.com/log/books/the_alloy_of_law/" />
+    <link href="https://kittywitch.space/log/books/the_alloy_of_law/" />
     <updated>2026-01-05T00:00:00Z</updated>
-    <id>https://example.com/log/books/the_alloy_of_law/</id>
+    <id>https://kittywitch.space/log/books/the_alloy_of_law/</id>
     <content type="html">&lt;p&gt;part western, part sherlock holmes detective novel, part high fantasy, the alloy of law is an interesting entry into the mistborn series. we have a timeskip of over 300 years here, which is especially interesting considering that the hero of ages essentially left us off with a blank slate of a re-created world, with the remaining survivors of the near-apocalypse tasked with re-creating a new society. suffice to say, it&#39;s kind of a lot to find out that this fantasy world experienced pretty much earth-like industrialization and it&#39;s the turn of the 20th century now, except magic (well, allomancy and feruchemy at least) is still a thing.&lt;/p&gt;
 &lt;!-- excerpt --&gt;
 &lt;p&gt;the primary protagonist is waxillium &amp;quot;wax&amp;quot; ladrian, a nobleman (which apparently is still a concept, even though it&#39;s more of a &amp;quot;these people come from rich families&amp;quot; thing and less one of specific priviliges now) who left his family and society to become a lawman in the less civilised roughs, which means he&#39;s pretty much a stereotypical western sheriff, guns and all, when we meet him. oh yeah, there&#39;s a lot of gunplay and gun descriptions in this book. but since this is still mistborn, wax is also an allomancer (specifically one who can push on metals) and a feruchemist too (he&#39;s able to manipulate his weight). a bit of tragedy happens and then his uncle dies, setting off the events to get him back into society - into the unsubtly named capital of elendel.&lt;/p&gt;
@@ -101,9 +101,9 @@
   </entry>
   <entry>
     <title>who&#39;s lila?</title>
-    <link href="https://example.com/log/games/whos_lila/" />
+    <link href="https://kittywitch.space/log/games/whos_lila/" />
     <updated>2026-01-01T00:00:00Z</updated>
-    <id>https://example.com/log/games/whos_lila/</id>
+    <id>https://kittywitch.space/log/games/whos_lila/</id>
     <content type="html">&lt;p&gt;i just don&#39;t think i was either smart or obsessed enough to fully comprehend what&#39;s happening here.&lt;/p&gt;
 &lt;p&gt;who&#39;s lila is a point-and-click horror game (except when it&#39;s not point-and-click) with a very striking 1-bit visual style (and once again, like mouthwashing, a very cool dithering effect), a face-contortion dialogue system (more on that in a second) and a lot of branching paths that help you slowly unravel what the hell is going on. on the surface, you play as high school student william, who has, as he puts it, &amp;quot;difficulty expressing emotions&amp;quot;. on top of that, he&#39;s part of a weird cult, and possibly involved in the disappearance of a fellow student. and maybe possessed.&lt;/p&gt;
 &lt;!-- excerpt --&gt;
@@ -115,9 +115,9 @@
   </entry>
   <entry>
     <title>end of year lists 2025</title>
-    <link href="https://example.com/blog/2026_01_01_end_of_year_lists/" />
+    <link href="https://kittywitch.space/blog/2026_01_01_end_of_year_lists/" />
     <updated>2026-01-01T00:00:00Z</updated>
-    <id>https://example.com/blog/2026_01_01_end_of_year_lists/</id>
+    <id>https://kittywitch.space/blog/2026_01_01_end_of_year_lists/</id>
     <content type="html">&lt;p&gt;oh man, oh man. another year over already??? the passage of time is cruel. i used to look forward to doing year-end lists, especially for music, some years compiling a list of up to 25 albums RELEASED in that specific year that i actively enjoyed. i don&#39;t think i listened to even close to that many new albums this year. it honestly doesn&#39;t matter that much, because who really gives a fuck about what my 23rd favorite album of [currentyear] was? but i do miss engaging with that much new music. on the other hand, in those years i probably wouldn&#39;t have been able to compile lists of things i actually enjoyed across a lot of other types of media listed here. additionally, long lists of stuff without explanations as to WHY i put them on the list have gotten less interesting for me anyway. i&#39;d rather be able to just list a small amount of things but be able to explain why i liked the things i liked.&lt;/p&gt;
 &lt;p&gt;i decided to do all of these lists as &amp;quot;best of what i first engaged with this year&amp;quot; and not as &amp;quot;what released this year&amp;quot; both out of practicality and also because this is meant to be a review of &lt;em&gt;my&lt;/em&gt; year and it doesn&#39;t matter if something is decades old, as long as i found it this year, it belongs on a best of this year list, right?&lt;/p&gt;
 &lt;h2 id=&quot;albums&quot;&gt;albums&lt;/h2&gt;
@@ -171,15 +171,15 @@
 &lt;/ol&gt;
 &lt;p&gt;time-loop game with really good writing. great cast of characters, fun to dig around and try to understand how to progress each loop and piece everything together. siffrin slowly losing it by seeing his friends die over and over again turns it into a psychological horror thing at times, but it&#39;s handled well.&lt;/p&gt;
 &lt;p&gt;silksong technically is on-hold or DNF for me, since i kind of gave up in act 3 and don&#39;t know if i&#39;ll be back. i haven&#39;t reached the final ending because the game is just too difficult for me in act 3. i know i just need to git gud but it really tested my patience too much. that aside, there&#39;s so much to love here. an expansive, beautiful world, many lovable side characters and most challenges, while seeming too difficult at first, can be overcome and it&#39;s really rewarding. idk, i&#39;m in weird spot with silksong right now. maybe i&#39;ll attempt to keep going at some point.&lt;/p&gt;
-&lt;p&gt;also reviewed &lt;a href=&quot;https://example.com/reviews/mouthwashing/&quot;&gt;here on the website&lt;/a&gt;. good well-paced psychological horror.&lt;/p&gt;
+&lt;p&gt;also reviewed &lt;a href=&quot;https://kittywitch.space/reviews/mouthwashing/&quot;&gt;here on the website&lt;/a&gt;. good well-paced psychological horror.&lt;/p&gt;
 </content>
   </entry>
   <entry>
     <title>the hero of ages</title>
-    <link href="https://example.com/log/books/the_hero_of_ages/" />
+    <link href="https://kittywitch.space/log/books/the_hero_of_ages/" />
     <updated>2025-12-31T00:00:00Z</updated>
-    <id>https://example.com/log/books/the_hero_of_ages/</id>
-    <content type="html">&lt;p&gt;this is the third book in sanderson&#39;s mistborn series, therefore expect spoilers for the two previous books (reviews &lt;a href=&quot;https://example.com/reviews/mistborn_the_final_empire/&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://example.com/reviews/the_well_of_ascension/&quot;&gt;here&lt;/a&gt;).&lt;/p&gt;
+    <id>https://kittywitch.space/log/books/the_hero_of_ages/</id>
+    <content type="html">&lt;p&gt;this is the third book in sanderson&#39;s mistborn series, therefore expect spoilers for the two previous books (reviews &lt;a href=&quot;https://kittywitch.space/reviews/mistborn_the_final_empire/&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://kittywitch.space/reviews/the_well_of_ascension/&quot;&gt;here&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;picking up from vin following what she thought to be the instructions of terris prophecy to save the world, only to release the thing attempting to destroy the world, we&#39;re starting off in a situation that is well and truly fucked. the force slash god ruin had been trapped by the power of an opposing force slash god, preservation and once unleashed, ruin can exert direct influence on the world and some important people and creatures to make the planet uninhabitable and force everybody into death through either starvation or violence.&lt;/p&gt;
 &lt;!-- excerpt --&gt;
 &lt;p&gt;every chapter, as in the previous books, is preceded by short blurbs of a journal by an initially unknown author. in this case, it&#39;s the titular hero of ages, although we don&#39;t get any confirmation of their identity until the climax of the book. but these short sections pull back the veil on most of the open questions regarding the forces at play, introduce another type of metallurgic magic and generally do a lot of convenient contextualizing infodumping. the now three total types of magic are also associated with the opposing forces slash gods (allomancy being of preservation, feruchemy being neutral and hemalurgy being of ruin), which takes a certain degree of importance since every user of hemalurgy can now possibly be puppeteered by ruin.&lt;/p&gt;
