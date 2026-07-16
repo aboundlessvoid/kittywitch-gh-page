@@ -1,0 +1,1024 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Book log</title>
+		<meta name="description" content="the world is a beautiful cat">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="kittywitch">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=chevron_backward,chevron_forward,first_page,last_page,star,star_half">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+@font-face {
+	font-family: PirateOne;
+	src: url('/PirataOne-Regular.ttf');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: IMFellDWPica;
+	src: url('/IMFellDWPica-Regular.ttf');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Veteran Typewriter';
+	src: url('/veteran typewriter.ttf');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Impact Label Reversed';
+	src: url('/Impact Label Reversed.ttf');
+	font-display: swap;
+}
+
+/* @font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 100 700;
+  src: url(https://fonts.gstatic.com/icon/font?kit=kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsL7DLI5eGLov98zWsgTge7EJQ&skey=b8dc2088854b122f&v=v290) format('woff2');
+} */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+	font-feature-settings: 'liga';
+  -moz-font-feature-settings: 'liga';
+  -moz-osx-font-smoothing: grayscale;
+
+  margin-right: -4px;
+
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.symbol-filled {
+	font-variation-settings:
+  'FILL' 1,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+/* Defaults */
+:root {
+	--font-family: 'Veteran Typewriter', -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-10: #E3E3E3;
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #69569b;
+	--alternating-background-color: #61569b;
+
+	--text-color: var(--color-gray-10);
+	--text-color-link: #F0ECF4;
+	--text-color-link-active: #EBE5F0;
+	--text-color-link-visited: #EBE5F0;
+
+	--syntax-tab-size: 2;
+}
+
+/* @media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+} */
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background: repeating-linear-gradient(var(--background-color), var(--background-color) 3px, var(--alternating-background-color) 3px, var(--alternating-background-color) 6px);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	font-size: 1.25rem;
+	max-width: 40em;
+}
+h1 {
+	font-family: 'Impact Label Reversed';
+	color: white;
+	rotate: -0.8deg;
+}
+
+h2, h3, h4, h5, h6 {
+	font-family: 'Veteran Typewriter';
+	color: black;
+}
+
+h1 > span {
+  background-color: #000;
+  display: inline;
+  padding: 0.5rem;
+
+  /* Needs prefixing */
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 0.5em 0;
+  margin-bottom: 0;
+  border-bottom: 1px dashed var(--color-gray-20);
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	font-family: PirateOne;
+	font-size: 2em; /* 16px /16 */
+	font-weight: 700;
+
+}
+.home-link:hover {
+	transition: all 0.5s;
+	background-image: linear-gradient(90deg, #FFADAD , #ffd6a5 14%, #fdffb6 29%, #caffbf 43%, #9bf6ff 57%, #a0c4ff 71%, #bdb2ff 86%, #ffc6ff 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	flex-wrap: wrap;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Dropdown container */
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-container > a::after {
+	padding-left: 3px;
+	font-size: 0.75rem;
+	content: "▼";
+}
+
+.dropdown-container:hover > a::after {
+	content: "▲";
+}
+
+/* Dropdown Content (Hidden by default) */
+.dropdown-nav {
+  display: none;
+  position: absolute;
+  background-color: var(--background-color);
+	list-style: none;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 0;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-nav li a {
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown-container:hover .dropdown-nav {
+  display: block;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
+.post-container {
+	border-radius: 0.5rem;
+	color: black;
+	background: #e3daff;
+	padding: 1rem;
+
+	a[href] {
+	color: #222;
+	}
+	a[href]:visited {
+		color: #444;
+	}
+	a[href]:hover,
+	a[href]:active {
+		color: #000;
+	}
+}
+
+.post-content {
+	margin-top: 1.25rem;
+	padding-top: 1rem;
+
+	border-top: 2px #c9b9f8 solid;
+	background-image: radial-gradient(#c9b9f8 1px, transparent 0);
+  background-size: 2rem 2rem;
+	background-position: 0rem 0rem;
+	/* background-image: linear-gradient(#d1c3fa .04em, transparent .04em); /*, linear-gradient(90deg, #d1c3fa .04em, transparent .04em);
+  background-size: 2rem 2rem; */
+}
+
+/** reviews */
+
+.review-header {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+
+	border-top: 1px dashed var(--color-gray-20);
+	border-bottom: 1px dashed var(--color-gray-20);
+	padding: 0.5rem 0;
+	width: 100%;
+}
+
+.metadata-left {
+	justify-content: start;
+
+	flex-grow: 1;
+}
+
+.review-data {
+	padding-top: 0.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 2rem;
+}
+
+.review-data-key {
+	margin-bottom: 0.5rem;
+}
+
+.review-data-value {
+	margin-top: 0.5rem;
+}
+
+.review-cover-container {
+	flex-shrink: 0;
+}
+
+.review-cover {
+	height: 120px;
+
+	border: #fff 1px solid;
+	border-radius: 4px;
+
+	display: block;
+}
+
+.ripped {
+	border: none;
+	border-top: dotted var(--background-color) 1.5rem;
+  left: 0;
+  position: absolute;
+  width: 100vw;
+}
+
+.extra-padding {
+	padding-top: 2.5rem;
+}
+
+.post-container h2 {
+	margin-bottom: 0.5rem;
+}
+
+/* nav */
+
+.pagination-nav ol {
+	list-style: none;
+	display: flex;
+	gap: 0.5rem;
+}
+
+/* info card */
+
+.infocard {
+	border: solid 2px white;
+	border-radius: 5px;
+	max-width: 20em;
+	padding: 1rem;
+	background-color: #d0c1ff ;
+	rotate: -2deg;
+}
+
+.infocard-item {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em;
+}
+
+.infocard-item-key {
+	align-self: flex-end;
+}
+
+.infocard-item-divider {
+	flex-grow: 1;
+	border-bottom: dotted 2px white;
+	min-width: .5em;
+	margin-bottom: 0.25rem;
+}
+
+.infocard-item-value {
+	align-self: flex-end;
+	text-align: end;
+}
+
+.redacted {
+	margin-left: -0.7rem;
+  	padding: 0 0.2rem;
+	background-color: #ff9675;
+	color: white;
+	transform: rotate(-7deg);
+	display: inline-block;
+}
+
+/** gallery */
+
+.gallery {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 1.25rem 0.75rem;
+	justify-content: space-around;
+}
+
+.gallery-img {
+	border: #fff 1px solid;
+	border-radius: 4px;
+
+	display: block;
+}
+
+footer {
+	padding-top: 0.5rem; /*new*/
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 0.5em 1em;
+
+	p {
+		margin: 0;
+	}
+}
+
+.tracklist {
+	display: grid;
+  grid-template-columns: 50% 50%;
+
+	background: #eef;
+  padding: 1rem;
+	padding-bottom: 0;
+  border-radius: 0.5rem;
+
+	background-image: linear-gradient(#ddd .05em, transparent .05em), linear-gradient(90deg, #ddd .05em, transparent .05em);
+  background-size: 1.5rem 1.5rem;
+	background-position: 0.7rem 0.7rem;
+
+	h2 {
+		border-bottom: solid;
+	}
+
+	ol {
+		padding-left: 2rem
+	}
+
+	@media (max-width: 600px) {
+		grid-template-columns: 100%;
+	}
+}
+
+.cover-embed {
+	display: grid;
+  grid-template-columns: 30% 70%;
+	margin-bottom: 1rem;
+
+	:first-child {
+		padding-left: 0;
+	}
+
+	:last-child {
+		padding-right: 0;
+	}
+
+	div {
+		padding: 0 0.5rem;
+	}
+
+	@media (max-width: 500px) {
+		grid-template-columns: 100%;
+		div {
+			padding: 0;
+		}
+	}
+
+	iframe {
+		aspect-ratio: unset;
+	}
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">kittywitch</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item">
+						<a href="/">Home</a>
+							<ul class="dropdown-nav">
+							</ul>
+					</li>
+					<li class="nav-item">
+						<a href="/blog/">Blog</a>
+							<ul class="dropdown-nav">
+							</ul>
+					</li>
+					<li class="nav-item dropdown-container">
+						<a href="/log/">Log</a>
+							<ul class="dropdown-nav">
+								<li class="dropdown-nav-item">
+									<a href="/log/books/" aria-current="page">Book log</a>
+								</li>
+								<li class="dropdown-nav-item">
+									<a href="/log/games/">Game log</a>
+								</li>
+							</ul>
+					</li>
+					<li class="nav-item">
+						<a href="/lists/">Mixtapes</a>
+							<ul class="dropdown-nav">
+							</ul>
+					</li>
+					<li class="nav-item">
+						<a href="/sillies/">Sillies</a>
+							<ul class="dropdown-nav">
+							</ul>
+					</li>
+					<li class="nav-item">
+						<a href="/now/">Now</a>
+							<ul class="dropdown-nav">
+							</ul>
+					</li>
+					<li class="nav-item">
+						<a href="/goals/">Goals</a>
+							<ul class="dropdown-nav">
+							</ul>
+					</li>
+					<li class="nav-item">
+						<a href="/about/">About</a>
+							<ul class="dropdown-nav">
+							</ul>
+					</li>
+					<li class="nav-item">
+						<a href="/feed/feed.xml">Feed</a>
+							<ul class="dropdown-nav">
+							</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<div class="post-container">
+	<h1 id="book-log"><span>Book log</span></h1>
+	<div class="post-content">
+		
+
+
+<ol reversed="" class="postlist" style="--postlist-index: 11">
+	<li class="postlist-item">
+		<h2 id="shadows-of-self"><a href="/log/books/shadows_of_self/" class="postlist-link">shadows of self</a></h2>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<div class="review-header">
+		<div class="metadata-left">
+			<ul class="post-metadata">
+				<li><time datetime="2026-02-09">09 February 2026</time></li>
+				<li><a href="/tags/log/" class="post-tag">log</a>, </li>
+				<li><a href="/tags/books/" class="post-tag">books</a></li>
+			</ul>
+			<div class="review-data">
+        <div>
+            <p class="review-data-key"><b>rating</b></p>
+            <p class="review-data-value"><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined">star_half</span><span class="material-symbols-outlined">star</span></p>
+        </div>
+        <div>
+            <p class="review-data-key"><b>genre</b></p>
+            <p class="review-data-value">fantasy</p>
+        </div>
+        
+        <div>
+            <p class="review-data-key"><b>author</b></p>
+            <p class="review-data-value">brandon sanderson</p>
+        </div>
+        
+        
+        
+        
+			</div>
+		</div>
+    <div class="review-cover-container">
+        <picture><source type="image/avif" srcset="/img/A6dcVeUQFY-79.avif 79w"><source type="image/webp" srcset="/img/A6dcVeUQFY-79.webp 79w"><img loading="lazy" decoding="async" src="/img/A6dcVeUQFY-79.png" class="review-cover" alt="cover artwork for shadows of self. it is heavily edited to be colorized purple and dithered so that it's barely recognizable as anything." width="79" height="120"></picture>
+    </div>
+</div>
+
+		<p>there were some days now between me finishing <em>shadows of self</em> and writing this review, on top of that the deeper i'm into a specific series, the more difficult it gets for me to not repeat myself, so this will be a short one.</p>
+
+			<a href="/log/books/shadows_of_self/" class="postlist-link">Read more</a>
+	</li>
+		<hr class="ripped">
+	<li class="postlist-item extra-padding">
+		<h2 id="negative-space"><a href="/log/books/negative_space/" class="postlist-link">negative space</a></h2>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<div class="review-header">
+		<div class="metadata-left">
+			<ul class="post-metadata">
+				<li><time datetime="2026-02-09">09 February 2026</time></li>
+				<li><a href="/tags/log/" class="post-tag">log</a>, </li>
+				<li><a href="/tags/books/" class="post-tag">books</a></li>
+			</ul>
+			<div class="review-data">
+        <div>
+            <p class="review-data-key"><b>rating</b></p>
+            <p class="review-data-value"><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span></p>
+        </div>
+        <div>
+            <p class="review-data-key"><b>genre</b></p>
+            <p class="review-data-value">horror</p>
+        </div>
+        
+        <div>
+            <p class="review-data-key"><b>author</b></p>
+            <p class="review-data-value">b.r. yeager</p>
+        </div>
+        
+        
+        
+        
+			</div>
+		</div>
+    <div class="review-cover-container">
+        <picture><source type="image/avif" srcset="/img/WDIqxo0WWw-74.avif 74w"><source type="image/webp" srcset="/img/WDIqxo0WWw-74.webp 74w"><img loading="lazy" decoding="async" src="/img/WDIqxo0WWw-74.png" class="review-cover" alt="cover artwork for negative space. it is heavily edited to be colorized purple and dithered so that it's barely recognizable as anything." width="74" height="120"></picture>
+    </div>
+</div>
+
+		<p>the setting of <em>negative space</em> is bleak: a slowly decaying town in new hampshire, a suicide epidemic, disaffected teens, a hallucinogenic drug that may or may not have actual supernatural components to it. the book follows three teens in rapidly switching first-person POVs, jill, ahmir and lu, charting the trajectories of their own lives as well as how these intersect with tyler, the fourth major character of <em>negative space</em>, whose point of view we are never privy to.</p>
+
+			<a href="/log/books/negative_space/" class="postlist-link">Read more</a>
+	</li>
+		<hr class="ripped">
+	<li class="postlist-item extra-padding">
+		<h2 id="serious-weakness"><a href="/log/books/serious_weakness/" class="postlist-link">serious weakness</a></h2>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<div class="review-header">
+		<div class="metadata-left">
+			<ul class="post-metadata">
+				<li><time datetime="2026-01-22">22 January 2026</time></li>
+				<li><a href="/tags/log/" class="post-tag">log</a>, </li>
+				<li><a href="/tags/books/" class="post-tag">books</a></li>
+			</ul>
+			<div class="review-data">
+        <div>
+            <p class="review-data-key"><b>rating</b></p>
+            <p class="review-data-value"><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined">star</span></p>
+        </div>
+        <div>
+            <p class="review-data-key"><b>genre</b></p>
+            <p class="review-data-value">horror</p>
+        </div>
+        
+        <div>
+            <p class="review-data-key"><b>author</b></p>
+            <p class="review-data-value">porpentine charity heartscape</p>
+        </div>
+        
+        
+        
+        
+			</div>
+		</div>
+    <div class="review-cover-container">
+        <picture><source type="image/avif" srcset="/img/6AenPx6HGs-80.avif 80w"><source type="image/webp" srcset="/img/6AenPx6HGs-80.webp 80w"><img loading="lazy" decoding="async" src="/img/6AenPx6HGs-80.png" class="review-cover" alt="cover artwork for serious weakness. it is heavily edited to be colorized purple and dithered so that it's barely recognizable as anything." width="80" height="120"></picture>
+    </div>
+</div>
+
+		<p>i've been rotating this book in my mind for days now (technically i only finished it yesterday, but i've been actively seeking out other people's thoughts on it for a bit now and reflecting on it). where to even start? probably: if you ever want to read this, check the content warnings <a href="https://app.thestorygraph.com/books/7f942c5a-793f-4708-91d1-280ed2ffe808/content_warnings">here</a> and <a href="https://xrafstar.monster/stories/serious_weakness/">here</a>. there's one very graphic rape scene here on top of a lot of torture, violence and further sexual assault.</p>
+
+			<a href="/log/books/serious_weakness/" class="postlist-link">Read more</a>
+	</li>
+		<hr class="ripped">
+	<li class="postlist-item extra-padding">
+		<h2 id="what-feasts-at-night"><a href="/log/books/what_feasts_at_night/" class="postlist-link">what feasts at night</a></h2>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<div class="review-header">
+		<div class="metadata-left">
+			<ul class="post-metadata">
+				<li><time datetime="2026-01-10">10 January 2026</time></li>
+				<li><a href="/tags/log/" class="post-tag">log</a>, </li>
+				<li><a href="/tags/books/" class="post-tag">books</a></li>
+			</ul>
+			<div class="review-data">
+        <div>
+            <p class="review-data-key"><b>rating</b></p>
+            <p class="review-data-value"><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined">star_half</span><span class="material-symbols-outlined">star</span></p>
+        </div>
+        <div>
+            <p class="review-data-key"><b>genre</b></p>
+            <p class="review-data-value">horror</p>
+        </div>
+        
+        <div>
+            <p class="review-data-key"><b>author</b></p>
+            <p class="review-data-value">t. kingfisher</p>
+        </div>
+        
+        
+        
+        
+			</div>
+		</div>
+    <div class="review-cover-container">
+        <picture><source type="image/avif" srcset="/img/PGChwx_VH6-79.avif 79w"><source type="image/webp" srcset="/img/PGChwx_VH6-79.webp 79w"><img loading="lazy" decoding="async" src="/img/PGChwx_VH6-79.png" class="review-cover" alt="cover artwork for what feasts at night. it is heavily edited to be colorized purple and dithered so that it's barely recognizable as anything." width="79" height="120"></picture>
+    </div>
+</div>
+
+		<p><em>what feasts at night</em> is a sequel to <em>what moves the dead</em>, which is a loose retelling of poe's <em>the fall of the house of usher</em>, keeping the gothic horror and basic premise, but going wild on everything else from protagonist to resolution. the protagonist is alex easton, a retired non-binary soldier from the fictional eastern-ish european country of gallacia. <em>what moves the dead</em> initially endeared me a lot with its handling of (gender) identity, going so far as establishing a peculiar but very interesting ruleset of personal pronouns in the ruritanian language which intersects well with easton's personal identity. where <em>dead</em> was a re-telling of a classic gothic horror short story, <em>night</em> has a wholly original plot, although it does heavily feature folkloristic horror, specifically the concept of a <em>moroi</em> from romanian folklore (which shares <em>some</em> similarities with a nachtmahr).</p>
+
+			<a href="/log/books/what_feasts_at_night/" class="postlist-link">Read more</a>
+	</li>
+		<hr class="ripped">
+	<li class="postlist-item extra-padding">
+		<h2 id="girl-flesh"><a href="/log/books/girl_flesh/" class="postlist-link">girl flesh</a></h2>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<div class="review-header">
+		<div class="metadata-left">
+			<ul class="post-metadata">
+				<li><time datetime="2026-01-10">10 January 2026</time></li>
+				<li><a href="/tags/log/" class="post-tag">log</a>, </li>
+				<li><a href="/tags/books/" class="post-tag">books</a></li>
+			</ul>
+			<div class="review-data">
+        <div>
+            <p class="review-data-key"><b>rating</b></p>
+            <p class="review-data-value"><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined symbol-filled">star</span><span class="material-symbols-outlined">star_half</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span></p>
+        </div>
+        <div>
+            <p class="review-data-key"><b>genre</b></p>
+            <p class="review-data-value">horror</p>
+        </div>
+        
+        <div>
+            <p class="review-data-key"><b>author</b></p>
+            <p class="review-data-value">may leitz</p>
+        </div>
+        
+        
+        
+        
+			</div>
+		</div>
+    <div class="review-cover-container">
+        <picture><source type="image/avif" srcset="/img/ZT5pj-617c-75.avif 75w"><source type="image/webp" srcset="/img/ZT5pj-617c-75.webp 75w"><img loading="lazy" decoding="async" src="/img/ZT5pj-617c-75.png" class="review-cover" alt="cover artwork for girl flesh. it is heavily edited to be colorized purple and dithered so that it's barely recognizable as anything." width="75" height="120"></picture>
+    </div>
+</div>
+
+		<p><em>girl flesh</em> describes itself as an extreme horror story about love. i suppose that this is an accurate one-sentence description of its mission statement and it mostly succeeds at being just that, despite being massively frustrating to me.</p>
+
+			<a href="/log/books/girl_flesh/" class="postlist-link">Read more</a>
+	</li>
+</ol>
+	<nav class="pagination-nav">
+		<ol>
+			<li><span class="material-symbols-outlined">first_page</span></li>
+			<li><span class="material-symbols-outlined">chevron_backward</span></li>
+			<li><a href="/log/books/" aria-current="page">1</a></li>
+			<li><a href="/log/books/1/">2</a></li>
+			<li><a href="/log/books/1/"><span class="material-symbols-outlined">chevron_forward</span></a></li>
+			<li><a href="/log/books/1/"><span class="material-symbols-outlined">last_page</span></a></li>
+		</ol>
+	</nav>
+
+
+
+	</div>
+</div>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<a href="/archive">Archive</a>
+			</p>
+			<p>
+				<em>Built with <a href="https://www.11ty.dev/">Eleventy v3.1.6</a></em>
+			</p>
+		</footer>
+
+		<!-- This page `/log/books/` was built on 2026-07-16T18:55:23.304Z -->
+		<script type="module" src="/dist/cC8wS6ZjFU.js"></script>
+	</body>
+</html>

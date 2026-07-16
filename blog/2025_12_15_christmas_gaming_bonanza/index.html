@@ -3,9 +3,10 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>christmas vacation gaming bonanza • kittywitch</title>
+		<title>christmas vacation gaming bonanza</title>
 		<meta name="description" content="forcing myself to play shorter video games by making a list to work through.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="kittywitch">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=chevron_backward,chevron_forward,first_page,last_page,star,star_half">
 		
 		
 		
@@ -23,12 +24,23 @@
 }
 
 @font-face {
+	font-family: 'Veteran Typewriter';
+	src: url('/veteran typewriter.ttf');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Impact Label Reversed';
+	src: url('/Impact Label Reversed.ttf');
+	font-display: swap;
+}
+
+/* @font-face {
   font-family: 'Material Symbols Outlined';
   font-style: normal;
   font-weight: 100 700;
   src: url(https://fonts.gstatic.com/icon/font?kit=kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsL7DLI5eGLov98zWsgTge7EJQ&skey=b8dc2088854b122f&v=v290) format('woff2');
-}
-
+} */
 .material-symbols-outlined {
   font-family: 'Material Symbols Outlined';
   font-weight: normal;
@@ -41,6 +53,7 @@
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
+	font-feature-settings: 'liga';
   -moz-font-feature-settings: 'liga';
   -moz-osx-font-smoothing: grayscale;
 
@@ -59,11 +72,11 @@
   'wght' 300,
   'GRAD' 0,
   'opsz' 24
-} 
+}
 
 /* Defaults */
 :root {
-	--font-family: IMFellDWPica, -apple-system, system-ui, sans-serif;
+	--font-family: 'Veteran Typewriter', -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
 
@@ -74,8 +87,8 @@
 	--color-gray-50: #C0C0C0;
 	--color-gray-90: #333;
 
-	--background-color: #74569b;
-	--alternating-background-color: #76638F;
+	--background-color: #69569b;
+	--alternating-background-color: #61569b;
 
 	--text-color: var(--color-gray-10);
 	--text-color-link: #F0ECF4;
@@ -84,6 +97,22 @@
 
 	--syntax-tab-size: 2;
 }
+
+/* @media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+} */
+
 
 /* Global stylesheet */
 * {
@@ -101,7 +130,6 @@ body {
 	font-family: var(--font-family);
 	color: var(--text-color);
 	background: repeating-linear-gradient(var(--background-color), var(--background-color) 3px, var(--alternating-background-color) 3px, var(--alternating-background-color) 6px);
-	/* background-color: var(--background-color); */
 }
 html {
 	overflow-y: scroll;
@@ -110,9 +138,25 @@ body {
 	font-size: 1.25rem;
 	max-width: 40em;
 }
+h1 {
+	font-family: 'Impact Label Reversed';
+	color: white;
+	rotate: -0.8deg;
+}
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: PirateOne;
+h2, h3, h4, h5, h6 {
+	font-family: 'Veteran Typewriter';
+	color: black;
+}
+
+h1 > span {
+  background-color: #000;
+  display: inline;
+  padding: 0.5rem;
+
+  /* Needs prefixing */
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -177,17 +221,8 @@ main :first-child {
 	margin-top: 0;
 }
 
-header, main {
+header {
 	border-bottom: 1px dashed var(--color-gray-20);
-}
-
-figure {
-	margin: 0;
-}
-
-figcaption {
-	text-align: center;
-	font-style: italic;
 }
 
 #skip-link {
@@ -214,7 +249,9 @@ figcaption {
 	gap: .5em 1em;
 	list-style: "";
 	border-top: 1px dashed var(--color-gray-20);
-	padding: 1em 0;
+	padding: 0.5em 0;
+  margin-bottom: 0;
+  border-bottom: 1px dashed var(--color-gray-20);
 }
 .links-nextprev > * {
 	flex-grow: 1;
@@ -255,13 +292,6 @@ code {
 	word-break: break-all;
 }
 
-.base-container {
-	margin: 1rem 0;
-	background-color: var(--background-color);
-	border: 2px solid var(--color-gray-20);
-	border-radius: 0.5rem;
-}
-
 /* Header */
 header {
 	display: flex;
@@ -279,16 +309,15 @@ header {
 }
 .home-link:hover {
 	transition: all 0.5s;
-	background-image: linear-gradient(90deg, #FFADAD , #ffd6a5 14%, #fdffb6 29%, #caffbf 43%, #9bf6ff 57%, #a0c4ff 71%, #bdb2ff 86%, #ffc6ff 100%); 
-	background-clip: text; 
-	-webkit-background-clip: text; 
-	-webkit-text-fill-color: transparent; 
+	background-image: linear-gradient(90deg, #FFADAD , #ffd6a5 14%, #fdffb6 29%, #caffbf 43%, #9bf6ff 57%, #a0c4ff 71%, #bdb2ff 86%, #ffc6ff 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 
 }
 .home-link:link:not(:hover) {
 	text-decoration: none;
 }
-
 /* Nav */
 .nav {
 	display: flex;
@@ -306,6 +335,45 @@ header {
 }
 .nav a[href][aria-current="page"] {
 	text-decoration: underline;
+}
+
+/* Dropdown container */
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-container > a::after {
+	padding-left: 3px;
+	font-size: 0.75rem;
+	content: "▼";
+}
+
+.dropdown-container:hover > a::after {
+	content: "▲";
+}
+
+/* Dropdown Content (Hidden by default) */
+.dropdown-nav {
+  display: none;
+  position: absolute;
+  background-color: var(--background-color);
+	list-style: none;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 0;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-nav li a {
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown-container:hover .dropdown-nav {
+  display: block;
 }
 
 /* Posts list */
@@ -333,7 +401,7 @@ header {
 .postlist-date,
 .postlist-item:before {
 	font-size: 0.8125em; /* 13px /16 */
-	color: var(--text-color);
+	color: var(--color-gray-90);
 }
 .postlist-date {
 	word-spacing: -0.5px;
@@ -351,16 +419,13 @@ header {
 .postlist-item-active .postlist-link {
 	font-weight: bold;
 }
-.postlist-description {
-	margin: 0;
-	flex-basis: 100%;
-}
 
 /* Tags */
 .post-tag {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+	text-transform: capitalize;
 	font-style: italic;
 }
 .postlist-item > .post-tag {
@@ -380,15 +445,118 @@ header {
 	margin-right: 1em;
 }
 
+.post-container {
+	border-radius: 0.5rem;
+	color: black;
+	background: #e3daff;
+	padding: 1rem;
+
+	a[href] {
+	color: #222;
+	}
+	a[href]:visited {
+		color: #444;
+	}
+	a[href]:hover,
+	a[href]:active {
+		color: #000;
+	}
+}
+
+.post-content {
+	margin-top: 1.25rem;
+	padding-top: 1rem;
+
+	border-top: 2px #c9b9f8 solid;
+	background-image: radial-gradient(#c9b9f8 1px, transparent 0);
+  background-size: 2rem 2rem;
+	background-position: 0rem 0rem;
+	/* background-image: linear-gradient(#d1c3fa .04em, transparent .04em); /*, linear-gradient(90deg, #d1c3fa .04em, transparent .04em);
+  background-size: 2rem 2rem; */
+}
+
+/** reviews */
+
+.review-header {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+
+	border-top: 1px dashed var(--color-gray-20);
+	border-bottom: 1px dashed var(--color-gray-20);
+	padding: 0.5rem 0;
+	width: 100%;
+}
+
+.metadata-left {
+	justify-content: start;
+
+	flex-grow: 1;
+}
+
+.review-data {
+	padding-top: 0.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 2rem;
+}
+
+.review-data-key {
+	margin-bottom: 0.5rem;
+}
+
+.review-data-value {
+	margin-top: 0.5rem;
+}
+
+.review-cover-container {
+	flex-shrink: 0;
+}
+
+.review-cover {
+	height: 120px;
+
+	border: #fff 1px solid;
+	border-radius: 4px;
+
+	display: block;
+}
+
+.ripped {
+	border: none;
+	border-top: dotted var(--background-color) 1.5rem;
+  left: 0;
+  position: absolute;
+  width: 100vw;
+}
+
+.extra-padding {
+	padding-top: 2.5rem;
+}
+
+.post-container h2 {
+	margin-bottom: 0.5rem;
+}
+
+/* nav */
+
+.pagination-nav ol {
+	list-style: none;
+	display: flex;
+	gap: 0.5rem;
+}
+
+/* info card */
+
 .infocard {
 	border: solid 2px white;
 	border-radius: 5px;
 	max-width: 20em;
 	padding: 1rem;
-	background-color: var(--alternating-background-color);
+	background-color: #d0c1ff ;
+	rotate: -2deg;
 }
 
-/* info card */
 .infocard-item {
 	display: flex;
 	justify-content: space-between;
@@ -414,10 +582,10 @@ header {
 .redacted {
 	margin-left: -0.7rem;
   	padding: 0 0.2rem;
-	background-color: #fff;
-	color: #74569b;
+	background-color: #ff9675;
+	color: white;
 	transform: rotate(-7deg);
-	display: inline-block; 
+	display: inline-block;
 }
 
 /** gallery */
@@ -437,54 +605,71 @@ header {
 	display: block;
 }
 
-/** reviews */
-
-.review-header {
+footer {
+	padding-top: 0.5rem; /*new*/
 	display: flex;
 	justify-content: space-between;
-	gap: 1rem;
-
-	border-top: 1px dashed var(--color-gray-20);
-	border-bottom: 1px dashed var(--color-gray-20);
-	padding: 0.5rem 0;
-}
-
-.review-data {
-	display: flex;
 	flex-wrap: wrap;
-	gap: 0.5rem 2rem;
-	justify-content: start;
+	gap: 0.5em 1em;
 
-	flex-grow: 1;
+	p {
+		margin: 0;
+	}
 }
 
-.review-data-key {
-	margin-bottom: 0.5rem;
+.tracklist {
+	display: grid;
+  grid-template-columns: 50% 50%;
+
+	background: #eef;
+  padding: 1rem;
+	padding-bottom: 0;
+  border-radius: 0.5rem;
+
+	background-image: linear-gradient(#ddd .05em, transparent .05em), linear-gradient(90deg, #ddd .05em, transparent .05em);
+  background-size: 1.5rem 1.5rem;
+	background-position: 0.7rem 0.7rem;
+
+	h2 {
+		border-bottom: solid;
+	}
+
+	ol {
+		padding-left: 2rem
+	}
+
+	@media (max-width: 600px) {
+		grid-template-columns: 100%;
+	}
 }
 
-.review-data-value {
-	margin-top: 0.5rem;
-}
-
-.review-cover-container {
-	flex-shrink: 0;
-}
-
-.review-cover {
-	height: 120px;
-
-	border: #fff 1px solid;
-	border-radius: 4px;
-
-	display: block;
-}
-
-.postlist-heading {
-	display: inline;
-}
-
-.reviewlist-item:not(:last-child) {
+.cover-embed {
+	display: grid;
+  grid-template-columns: 30% 70%;
 	margin-bottom: 1rem;
+
+	:first-child {
+		padding-left: 0;
+	}
+
+	:last-child {
+		padding-right: 0;
+	}
+
+	div {
+		padding: 0 0.5rem;
+	}
+
+	@media (max-width: 500px) {
+		grid-template-columns: 100%;
+		div {
+			padding: 0;
+		}
+	}
+
+	iframe {
+		aspect-ratio: unset;
+	}
 }
 /**
  * okaidia theme for JavaScript, CSS and HTML
@@ -659,39 +844,87 @@ pre[class*="language-diff-"] {
 	<body>
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
 
-		<div class="base-container">
-			<header>
-				<a href="/" class="home-link">kittywitch</a>
-				<nav>
-					<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
-					<ul class="nav">
-						<li class="nav-item"><a href="/">home</a></li>
-						<li class="nav-item"><a href="/archive/">all posts</a></li>
-						<li class="nav-item"><a href="/reviews/">reviews</a></li>
-						<li class="nav-item"><a href="/thoughts/">thoughts</a></li>
-						<li class="nav-item"><a href="/creations/">creations</a></li>
-						<li class="nav-item"><a href="/log/">log</a></li>
-						<li class="nav-item"><a href="/sillies/">sillies</a></li>
-						<li class="nav-item"><a href="/about/">about</a></li>
-						<li class="nav-item"><a href="/feed/feed.xml">feed</a></li>
-					</ul>
-				</nav>
-			</header>
+		<header>
+			<a href="/" class="home-link">kittywitch</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item">
+						<a href="/">Home</a>
+							<ul class="dropdown-nav">
+							</ul>
+					</li>
+					<li class="nav-item">
+						<a href="/blog/">Blog</a>
+							<ul class="dropdown-nav">
+							</ul>
+					</li>
+					<li class="nav-item dropdown-container">
+						<a href="/log/">Log</a>
+							<ul class="dropdown-nav">
+								<li class="dropdown-nav-item">
+									<a href="/log/books/">Book log</a>
+								</li>
+								<li class="dropdown-nav-item">
+									<a href="/log/games/">Game log</a>
+								</li>
+							</ul>
+					</li>
+					<li class="nav-item">
+						<a href="/lists/">Mixtapes</a>
+							<ul class="dropdown-nav">
+							</ul>
+					</li>
+					<li class="nav-item">
+						<a href="/sillies/">Sillies</a>
+							<ul class="dropdown-nav">
+							</ul>
+					</li>
+					<li class="nav-item">
+						<a href="/now/">Now</a>
+							<ul class="dropdown-nav">
+							</ul>
+					</li>
+					<li class="nav-item">
+						<a href="/goals/">Goals</a>
+							<ul class="dropdown-nav">
+							</ul>
+					</li>
+					<li class="nav-item">
+						<a href="/about/">About</a>
+							<ul class="dropdown-nav">
+							</ul>
+					</li>
+					<li class="nav-item">
+						<a href="/feed/feed.xml">Feed</a>
+							<ul class="dropdown-nav">
+							</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
 
-			<main id="main">
-				<heading-anchors>
-					
+		<main id="main">
+			<heading-anchors>
+				
 
 
-<h1 id="christmas-vacation-gaming-bonanza">christmas vacation gaming bonanza</h1>
+<div class="post-container">
+	<h1 id="christmas-vacation-gaming-bonanza"><span>christmas vacation gaming bonanza</span></h1>
 
-<ul class="post-metadata">
-	<li><time datetime="2025-12-15">15 december 2025</time></li>
-	<li><a href="/tags/thoughts/" class="post-tag">thoughts</a>, </li>
-	<li><a href="/tags/games/" class="post-tag"> games</a></li>
-</ul>
+	<div class="review-header">
+		<div class="metadata-left">
+			<ul class="post-metadata">
+				<li><time datetime="2025-12-15">15 December 2025</time></li>
+				<li><a href="/tags/blog/" class="post-tag">blog</a>, </li>
+				<li><a href="/tags/thoughts/" class="post-tag">thoughts</a></li>
+			</ul>
+		</div>
+</div>
 
-<p>for the last few years, i've been gravitating towards BIG video games. the 100 hour JRPGs that consume your life for several months. that meant that a lot of interesting titles that i wishlisted or even bought fell by the wayside. i want to change this and because i'm extra like that, i compiled a list of 10 games mostly shorter than 5 hours (2 of them are estimated at 6 and 7 hours respectively, shhh) to tackle during my 2 weeks off around christmas and new years. it's a bit optimistic of me to think that i can make it through the entire list in that time, so maybe it will be a christmas-holiday-and-january endeavor, but that's fine. for some bonus motivation i'm also posting the list here and maybeee i will also do reviews of the games on the site - but since it's a lot of games in a short time, maybe very bite-sized ones, we'll see.</p>
+
+	<div class="post-content">
+		<p>for the last few years, i've been gravitating towards BIG video games. the 100 hour JRPGs that consume your life for several months. that meant that a lot of interesting titles that i wishlisted or even bought fell by the wayside. i want to change this and because i'm extra like that, i compiled a list of 10 games mostly shorter than 5 hours (2 of them are estimated at 6 and 7 hours respectively, shhh) to tackle during my 2 weeks off around christmas and new years. it's a bit optimistic of me to think that i can make it through the entire list in that time, so maybe it will be a christmas-holiday-and-january endeavor, but that's fine. for some bonus motivation i'm also posting the list here and maybeee i will also do reviews of the games on the site - but since it's a lot of games in a short time, maybe very bite-sized ones, we'll see.</p>
 <h2 id="the-list">~~ the list ~~</h2>
 <ol>
 <li>mouthwashing</li>
@@ -707,20 +940,24 @@ pre[class*="language-diff-"] {
 </ol>
 <p>all of these are indies, but some of them are pretty big titles in terms of popularity and some of them are more niche. there's a nice spread of genres here too (although i'm starting off with a horror double feature). excited to tackle some of my backlog!! (and also to pay some more money for titles i don't own yet lmao)</p>
 
-<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/2025_11_02_xenoblade_silksong/">hollow xenoblade: silksong (definitive edition)</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/2026_01_01_end_of_year_lists/">end of year lists 2025</a></li>
+	</div>
+</div>
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/log/books/katabasis/">katabasis</a></li><li class="links-nextprev-next">Next →<br><a href="/log/books/the_well_of_ascension/">the well of ascension</a></li>
 </ul>
 
-				</heading-anchors>
-			</main>
+			</heading-anchors>
+		</main>
 
-			<footer>
-				<p>
-					<em>Built with <a href="https://www.11ty.dev/">Eleventy v3.1.2</a></em>
-				</p>
-			</footer>
-		<div>
+		<footer>
+			<p>
+				<a href="/archive">Archive</a>
+			</p>
+			<p>
+				<em>Built with <a href="https://www.11ty.dev/">Eleventy v3.1.6</a></em>
+			</p>
+		</footer>
 
-		<!-- This page `/blog/2025_12_15_christmas_gaming_bonanza/` was built on 2026-02-09T21:58:24.468Z -->
-		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
-	</div></div></body>
+		<!-- This page `/blog/2025_12_15_christmas_gaming_bonanza/` was built on 2026-07-16T18:55:23.306Z -->
+		<script type="module" src="/dist/cC8wS6ZjFU.js"></script>
+	</body>
 </html>

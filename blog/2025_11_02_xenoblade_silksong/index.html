@@ -3,9 +3,10 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>hollow xenoblade: silksong (definitive edition) • kittywitch</title>
+		<title>hollow xenoblade: silksong (definitive edition)</title>
 		<meta name="description" content="rambling about the two video games i&#39;m currently playing">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="kittywitch">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=chevron_backward,chevron_forward,first_page,last_page,star,star_half">
 		
 		
 		
@@ -23,12 +24,23 @@
 }
 
 @font-face {
+	font-family: 'Veteran Typewriter';
+	src: url('/veteran typewriter.ttf');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Impact Label Reversed';
+	src: url('/Impact Label Reversed.ttf');
+	font-display: swap;
+}
+
+/* @font-face {
   font-family: 'Material Symbols Outlined';
   font-style: normal;
   font-weight: 100 700;
   src: url(https://fonts.gstatic.com/icon/font?kit=kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsL7DLI5eGLov98zWsgTge7EJQ&skey=b8dc2088854b122f&v=v290) format('woff2');
-}
-
+} */
 .material-symbols-outlined {
   font-family: 'Material Symbols Outlined';
   font-weight: normal;
@@ -41,6 +53,7 @@
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
+	font-feature-settings: 'liga';
   -moz-font-feature-settings: 'liga';
   -moz-osx-font-smoothing: grayscale;
 
@@ -59,11 +72,11 @@
   'wght' 300,
   'GRAD' 0,
   'opsz' 24
-} 
+}
 
 /* Defaults */
 :root {
-	--font-family: IMFellDWPica, -apple-system, system-ui, sans-serif;
+	--font-family: 'Veteran Typewriter', -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
 
@@ -74,8 +87,8 @@
 	--color-gray-50: #C0C0C0;
 	--color-gray-90: #333;
 
-	--background-color: #74569b;
-	--alternating-background-color: #76638F;
+	--background-color: #69569b;
+	--alternating-background-color: #61569b;
 
 	--text-color: var(--color-gray-10);
 	--text-color-link: #F0ECF4;
@@ -84,6 +97,22 @@
 
 	--syntax-tab-size: 2;
 }
+
+/* @media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+} */
+
 
 /* Global stylesheet */
 * {
@@ -101,7 +130,6 @@ body {
 	font-family: var(--font-family);
 	color: var(--text-color);
 	background: repeating-linear-gradient(var(--background-color), var(--background-color) 3px, var(--alternating-background-color) 3px, var(--alternating-background-color) 6px);
-	/* background-color: var(--background-color); */
 }
 html {
 	overflow-y: scroll;
@@ -110,9 +138,25 @@ body {
 	font-size: 1.25rem;
 	max-width: 40em;
 }
+h1 {
+	font-family: 'Impact Label Reversed';
+	color: white;
+	rotate: -0.8deg;
+}
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: PirateOne;
+h2, h3, h4, h5, h6 {
+	font-family: 'Veteran Typewriter';
+	color: black;
+}
+
+h1 > span {
+  background-color: #000;
+  display: inline;
+  padding: 0.5rem;
+
+  /* Needs prefixing */
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -177,17 +221,8 @@ main :first-child {
 	margin-top: 0;
 }
 
-header, main {
+header {
 	border-bottom: 1px dashed var(--color-gray-20);
-}
-
-figure {
-	margin: 0;
-}
-
-figcaption {
-	text-align: center;
-	font-style: italic;
 }
 
 #skip-link {
@@ -214,7 +249,9 @@ figcaption {
 	gap: .5em 1em;
 	list-style: "";
 	border-top: 1px dashed var(--color-gray-20);
-	padding: 1em 0;
+	padding: 0.5em 0;
+  margin-bottom: 0;
+  border-bottom: 1px dashed var(--color-gray-20);
 }
 .links-nextprev > * {
 	flex-grow: 1;
@@ -255,13 +292,6 @@ code {
 	word-break: break-all;
 }
 
-.base-container {
-	margin: 1rem 0;
-	background-color: var(--background-color);
-	border: 2px solid var(--color-gray-20);
-	border-radius: 0.5rem;
-}
-
 /* Header */
 header {
 	display: flex;
@@ -279,16 +309,15 @@ header {
 }
 .home-link:hover {
 	transition: all 0.5s;
-	background-image: linear-gradient(90deg, #FFADAD , #ffd6a5 14%, #fdffb6 29%, #caffbf 43%, #9bf6ff 57%, #a0c4ff 71%, #bdb2ff 86%, #ffc6ff 100%); 
-	background-clip: text; 
-	-webkit-background-clip: text; 
-	-webkit-text-fill-color: transparent; 
+	background-image: linear-gradient(90deg, #FFADAD , #ffd6a5 14%, #fdffb6 29%, #caffbf 43%, #9bf6ff 57%, #a0c4ff 71%, #bdb2ff 86%, #ffc6ff 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 
 }
 .home-link:link:not(:hover) {
 	text-decoration: none;
 }
-
 /* Nav */
 .nav {
 	display: flex;
@@ -306,6 +335,45 @@ header {
 }
 .nav a[href][aria-current="page"] {
 	text-decoration: underline;
+}
+
+/* Dropdown container */
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-container > a::after {
+	padding-left: 3px;
+	font-size: 0.75rem;
+	content: "▼";
+}
+
+.dropdown-container:hover > a::after {
+	content: "▲";
+}
+
+/* Dropdown Content (Hidden by default) */
+.dropdown-nav {
+  display: none;
+  position: absolute;
+  background-color: var(--background-color);
+	list-style: none;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 0;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-nav li a {
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown-container:hover .dropdown-nav {
+  display: block;
 }
 
 /* Posts list */
@@ -333,7 +401,7 @@ header {
 .postlist-date,
 .postlist-item:before {
 	font-size: 0.8125em; /* 13px /16 */
-	color: var(--text-color);
+	color: var(--color-gray-90);
 }
 .postlist-date {
 	word-spacing: -0.5px;
@@ -351,16 +419,13 @@ header {
 .postlist-item-active .postlist-link {
 	font-weight: bold;
 }
-.postlist-description {
-	margin: 0;
-	flex-basis: 100%;
-}
 
 /* Tags */
 .post-tag {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+	text-transform: capitalize;
 	font-style: italic;
 }
 .postlist-item > .post-tag {
@@ -380,15 +445,118 @@ header {
 	margin-right: 1em;
 }
 
+.post-container {
+	border-radius: 0.5rem;
+	color: black;
+	background: #e3daff;
+	padding: 1rem;
+
+	a[href] {
+	color: #222;
+	}
+	a[href]:visited {
+		color: #444;
+	}
+	a[href]:hover,
+	a[href]:active {
+		color: #000;
+	}
+}
+
+.post-content {
+	margin-top: 1.25rem;
+	padding-top: 1rem;
+
+	border-top: 2px #c9b9f8 solid;
+	background-image: radial-gradient(#c9b9f8 1px, transparent 0);
+  background-size: 2rem 2rem;
+	background-position: 0rem 0rem;
+	/* background-image: linear-gradient(#d1c3fa .04em, transparent .04em); /*, linear-gradient(90deg, #d1c3fa .04em, transparent .04em);
+  background-size: 2rem 2rem; */
+}
+
+/** reviews */
+
+.review-header {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+
+	border-top: 1px dashed var(--color-gray-20);
+	border-bottom: 1px dashed var(--color-gray-20);
+	padding: 0.5rem 0;
+	width: 100%;
+}
+
+.metadata-left {
+	justify-content: start;
+
+	flex-grow: 1;
+}
+
+.review-data {
+	padding-top: 0.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 2rem;
+}
+
+.review-data-key {
+	margin-bottom: 0.5rem;
+}
+
+.review-data-value {
+	margin-top: 0.5rem;
+}
+
+.review-cover-container {
+	flex-shrink: 0;
+}
+
+.review-cover {
+	height: 120px;
+
+	border: #fff 1px solid;
+	border-radius: 4px;
+
+	display: block;
+}
+
+.ripped {
+	border: none;
+	border-top: dotted var(--background-color) 1.5rem;
+  left: 0;
+  position: absolute;
+  width: 100vw;
+}
+
+.extra-padding {
+	padding-top: 2.5rem;
+}
+
+.post-container h2 {
+	margin-bottom: 0.5rem;
+}
+
+/* nav */
+
+.pagination-nav ol {
+	list-style: none;
+	display: flex;
+	gap: 0.5rem;
+}
+
+/* info card */
+
 .infocard {
 	border: solid 2px white;
 	border-radius: 5px;
 	max-width: 20em;
 	padding: 1rem;
-	background-color: var(--alternating-background-color);
+	background-color: #d0c1ff ;
+	rotate: -2deg;
 }
 
-/* info card */
 .infocard-item {
 	display: flex;
 	justify-content: space-between;
@@ -414,10 +582,10 @@ header {
 .redacted {
 	margin-left: -0.7rem;
   	padding: 0 0.2rem;
-	background-color: #fff;
-	color: #74569b;
+	background-color: #ff9675;
+	color: white;
 	transform: rotate(-7deg);
-	display: inline-block; 
+	display: inline-block;
 }
 
 /** gallery */
@@ -437,54 +605,71 @@ header {
 	display: block;
 }
 
-/** reviews */
-
-.review-header {
+footer {
+	padding-top: 0.5rem; /*new*/
 	display: flex;
 	justify-content: space-between;
-	gap: 1rem;
-
-	border-top: 1px dashed var(--color-gray-20);
-	border-bottom: 1px dashed var(--color-gray-20);
-	padding: 0.5rem 0;
-}
-
-.review-data {
-	display: flex;
 	flex-wrap: wrap;
-	gap: 0.5rem 2rem;
-	justify-content: start;
+	gap: 0.5em 1em;
 
-	flex-grow: 1;
+	p {
+		margin: 0;
+	}
 }
 
-.review-data-key {
-	margin-bottom: 0.5rem;
+.tracklist {
+	display: grid;
+  grid-template-columns: 50% 50%;
+
+	background: #eef;
+  padding: 1rem;
+	padding-bottom: 0;
+  border-radius: 0.5rem;
+
+	background-image: linear-gradient(#ddd .05em, transparent .05em), linear-gradient(90deg, #ddd .05em, transparent .05em);
+  background-size: 1.5rem 1.5rem;
+	background-position: 0.7rem 0.7rem;
+
+	h2 {
+		border-bottom: solid;
+	}
+
+	ol {
+		padding-left: 2rem
+	}
+
+	@media (max-width: 600px) {
+		grid-template-columns: 100%;
+	}
 }
 
-.review-data-value {
-	margin-top: 0.5rem;
-}
-
-.review-cover-container {
-	flex-shrink: 0;
-}
-
-.review-cover {
-	height: 120px;
-
-	border: #fff 1px solid;
-	border-radius: 4px;
-
-	display: block;
-}
-
-.postlist-heading {
-	display: inline;
-}
-
-.reviewlist-item:not(:last-child) {
+.cover-embed {
+	display: grid;
+  grid-template-columns: 30% 70%;
 	margin-bottom: 1rem;
+
+	:first-child {
+		padding-left: 0;
+	}
+
+	:last-child {
+		padding-right: 0;
+	}
+
+	div {
+		padding: 0 0.5rem;
+	}
+
+	@media (max-width: 500px) {
+		grid-template-columns: 100%;
+		div {
+			padding: 0;
+		}
+	}
+
+	iframe {
+		aspect-ratio: unset;
+	}
 }
 /**
  * okaidia theme for JavaScript, CSS and HTML
@@ -659,52 +844,94 @@ pre[class*="language-diff-"] {
 	<body>
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
 
-		<div class="base-container">
-			<header>
-				<a href="/" class="home-link">kittywitch</a>
-				<nav>
-					<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
-					<ul class="nav">
-						<li class="nav-item"><a href="/">home</a></li>
-						<li class="nav-item"><a href="/archive/">all posts</a></li>
-						<li class="nav-item"><a href="/reviews/">reviews</a></li>
-						<li class="nav-item"><a href="/thoughts/">thoughts</a></li>
-						<li class="nav-item"><a href="/creations/">creations</a></li>
-						<li class="nav-item"><a href="/log/">log</a></li>
-						<li class="nav-item"><a href="/sillies/">sillies</a></li>
-						<li class="nav-item"><a href="/about/">about</a></li>
-						<li class="nav-item"><a href="/feed/feed.xml">feed</a></li>
-					</ul>
-				</nav>
-			</header>
+		<header>
+			<a href="/" class="home-link">kittywitch</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item">
+						<a href="/">Home</a>
+							<ul class="dropdown-nav">
+							</ul>
+					</li>
+					<li class="nav-item">
+						<a href="/blog/">Blog</a>
+							<ul class="dropdown-nav">
+							</ul>
+					</li>
+					<li class="nav-item dropdown-container">
+						<a href="/log/">Log</a>
+							<ul class="dropdown-nav">
+								<li class="dropdown-nav-item">
+									<a href="/log/books/">Book log</a>
+								</li>
+								<li class="dropdown-nav-item">
+									<a href="/log/games/">Game log</a>
+								</li>
+							</ul>
+					</li>
+					<li class="nav-item">
+						<a href="/lists/">Mixtapes</a>
+							<ul class="dropdown-nav">
+							</ul>
+					</li>
+					<li class="nav-item">
+						<a href="/sillies/">Sillies</a>
+							<ul class="dropdown-nav">
+							</ul>
+					</li>
+					<li class="nav-item">
+						<a href="/now/">Now</a>
+							<ul class="dropdown-nav">
+							</ul>
+					</li>
+					<li class="nav-item">
+						<a href="/goals/">Goals</a>
+							<ul class="dropdown-nav">
+							</ul>
+					</li>
+					<li class="nav-item">
+						<a href="/about/">About</a>
+							<ul class="dropdown-nav">
+							</ul>
+					</li>
+					<li class="nav-item">
+						<a href="/feed/feed.xml">Feed</a>
+							<ul class="dropdown-nav">
+							</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
 
-			<main id="main">
-				<heading-anchors>
-					
+		<main id="main">
+			<heading-anchors>
+				
 
 
-<h1 id="hollow-xenoblade-silksong-definitive-edition">hollow xenoblade: silksong (definitive edition)</h1>
+<div class="post-container">
+	<h1 id="hollow-xenoblade-silksong-definitive-edition"><span>hollow xenoblade: silksong (definitive edition)</span></h1>
 
-<ul class="post-metadata">
-	<li><time datetime="2025-11-02">02 november 2025</time></li>
-	<li><a href="/tags/thoughts/" class="post-tag">thoughts</a>, </li>
-	<li><a href="/tags/games/" class="post-tag"> games</a></li>
-</ul>
+	<div class="review-header">
+		<div class="metadata-left">
+			<ul class="post-metadata">
+				<li><time datetime="2025-11-02">02 November 2025</time></li>
+				<li><a href="/tags/blog/" class="post-tag">blog</a>, </li>
+				<li><a href="/tags/thoughts/" class="post-tag">thoughts</a></li>
+			</ul>
+		</div>
+</div>
 
-<p>in the last weeks i've been juggling two very different but in their own way similarly expansive games and while i'm still in the middle of both of them, i thought i'd check in with my current thoughts on them.</p>
+
+	<div class="post-content">
+		<p>in the last weeks i've been juggling two very different but in their own way similarly expansive games and while i'm still in the middle of both of them, i thought i'd check in with my current thoughts on them.</p>
 <h2 id="hollowest-knight-2-tokyo-drift-2-snilk-2-snog">hollowest knight 2: tokyo drift - 2 snilk 2 snog</h2>
 <p>it's the duke nukem forever of metroidvanias, except that production only took so long because these australian madlads were having too much fun (and cash) to work on it for 5 extra years. and it shows. i've been slower than most people excited to dive into it first day and still haven't beaten-beaten it almost 2 months after release (if you count seeing 2 of the games 4-5 endings as not beaten-beaten, which i don't, in this case). i've had my struggles with it, i've had some complaints about choices they made, especially with how unforgiving the early game was for me, but it truly sucked me in anyway.</p>
 <p>some bosses for me personally hit annoying-frustrating levels (this correlates heavily with the amount of spawned adds and inversely with the size of the boss arena), some actively spurred me on to try more, even if i got my ass kicked hard for the first 2 or 20 tries. the second fight with lace is a thing of beauty. that's when i finally understood why some people referred to some of the boss fights as a kind of dance. once you are in a rhythm, in a flow state, everything clicks and it's intoxicating and one mistake can make an entire attempt unravel. the game is always unforgiving, but sometimes it's in ways that make you analyse where you went wrong and spur you on to try again and sometimes in ways that make you want to close and uninstall the game.</p>
-<figure>
-    <img src="/img/silk_1.png" alt="hornet, a masked bug creature wearing a red cloak stands next to sherma, another (smaller) bug creature holding a needle and a chime. there's a dialogue box reading: 'Sturdy gaaaa-aaate, I don't ask you to breeak or beee-eeend, Just open a little for me, and my tall maiden frieeee-eeend!'">
-    <figcaption>meeting the best boy</figcaption>
-</figure>
+<figure><picture><source type="image/avif" srcset="/img/lxVqyi7LUx-764.avif 764w"><source type="image/webp" srcset="/img/lxVqyi7LUx-764.webp 764w"><img loading="lazy" decoding="async" src="/img/lxVqyi7LUx-764.png" alt="hornet, a masked bug creature wearing a red cloak stands next to sherma, another (smaller) bug creature holding a needle and a chime. there's a dialogue box reading: 'Sturdy gaaaa-aaate, I don't ask you to breeak or beee-eeend, Just open a little for me, and my tall maiden frieeee-eeend!'" width="764" height="430"></picture><figcaption>meeting the best boy</figcaption></figure>
 <p>story-wise i have finally just now hit the beat that turns everything on its head - the start of act 3 - and &quot;but wait there's more&quot;'s the game in a way that i didn't entirely foresee and games rarely just do (like nier: automata's route c). essentially it's doing the good old &quot;you're in the sequel now, bucko&quot; except it's still the same game thing and that move always impresses me. i will not go more into depth about act 3 here as i've only just started it and don't know the full extent of world-transformation and new content yet. up until that point, i've had a good time with the game in terms of the story it presented, although it's not close to the levels of how much i enjoyed hollow knight's story. the world and it's inhabitants really profit from the long development cycle that was seemingly just to cram more details and polish into the game though. there are so many weird and interesting characters you meet in pharloom, with several of them having their own little story arcs as they make their way through the world. sherma and shakra are the obvious highlights here. i'm eager to see how act 3 turns the story on its head and whether it will change my feelings.</p>
 <p>as i earlier said, i have had my struggles with the gameplay. the difficulty is upped a notch compared to hollow knight, which is especially felt in the beginning, but it never really lets up. in some cases this is fine, you just need to git gud, in some cases there's a real frustration wall. while crowding a small boss arena with 3-5 exploding one-hit enemies certainly makes for a challenging fight, it does not make for a fun one (fuck you, broodmother). i've also had my issues with some of the introduced gameplay elements. the crest system on the one hand gives players an extreme amount of flexibility as to how they approach challenges, but at the same time i've neglected every crest aside from the reaper and the wanderer since i got these two because the reaper just obviously gives the best moveset for normal exploration and the wanderer's speed is handy in boss fights where you don't heavily rely on attacking tools. i'm sure the other crests are good, more optimal for certain situations etc. etc. but the amount of choice personally overwhelms me mostly, so i stick to two - as they all play so differently that you have to re-learn your speed, range, pogo, etc. it feels too complex to me to try to learn more of them.</p>
-<figure>
-    <img src="/img/silk_2.png" alt="hornet, a masked bug creature, now naked, revealing a black gangly body, stands in a decrepit-looking area next to a broken cage.">
-    <figcaption>hornet gone wild</figcaption>
-</figure>
+<figure><picture><source type="image/avif" srcset="/img/Qku93cEyPy-764.avif 764w"><source type="image/webp" srcset="/img/Qku93cEyPy-764.webp 764w"><img loading="lazy" decoding="async" src="/img/Qku93cEyPy-764.png" alt="hornet, a masked bug creature, now naked, revealing a black gangly body, stands in a decrepit-looking area next to a broken cage." width="764" height="430"></picture><figcaption>hornet gone wild</figcaption></figure>
 <p>i've mentioned the attacking tools, which on the one hand are extremely cool and versatile (there's at least 20 different tools for damage-dealing purposes and most of them are pretty inventive), but here i've also had a difficult time with the decision when to use which or even whether to use them at all. upgraded tools can eat through the health of later-game bosses while you're just dodging the boss and barely using your needle. there's a cost though: to replenish tools you need to consume shell shards which are dropped by most enemies (or sometimes the environment and can also be bought). and replenishing tools is <em>expensive</em>. which means, if you're like me and routinely need 10-50 attempts for a boss fight, means, you <em>quickly</em> run out of them. and that puts me an awkward spot. do i try to speed up my dealt damage with tools when i don't know whether i'm even able to but a decent dent in the boss's hp or do i wait until i know the patterns better? am i limiting myself if i save up my precious shell shards and tools or am i limiting myself if try to throw everything at a boss instead of learning patterns? this is obviously the game as it is meant to work, but for me it it mostly frustrating since it is another layer where the game is communicating to me how much i suck at it.</p>
 <p>whew. that was a big big section of complaining which makes it sound like i don't enjoy the game, which couldn't be further from the truth. but, as much as i am in awe of the game's scope, desolate beauty, oftentime great enemy design, there's a lot of frustrations to mull over if a big part of my playtime is me throwing myself at boss and failing. i know that that's the experience i was in for and i'm having a good, often even great time with it, but the frustrations are there. it might still make its way into my favorite games, but it doesn't have the same magic for me that hollow knight did, even if on paper it's the same but bigger and more polished.</p>
 <p>as a final aside there's one frustration i've often seen online that wasn't an issue for me for the most part: the dreaded topic of boss runbacks. for some bosses (especially for the last judge and whatever the guy's name in bilewater was) i've read a lot of complaints about how difficult the way back to the bosses is. and as much as i kinda see that - especially for the last judge the first few walks back were rough - at some point i started to understand the optimal ways to dodge enemies on the way, see optimal routes and it never turned into a big thing for me. i do think that the game wouldn't be worse if it just let you continue right at the start of a boss arena if you die, but the runbacks didn't sour my experience with the game at all.</p>
@@ -712,10 +939,7 @@ pre[class*="language-diff-"] {
 <p>i've stumbled into enjoying jrpgs pretty late and mostly skipped the classics (especially the ps1 &amp; ps2 era which is mostly what the people i know who are into jrpgs grew up playing). i never had a gaming console aside from the gameboy color as a child and was too busy with bad sports games anyway. but with the release of the switch i started dipping my toes in and i've played quite a bit of jrpgs since then. so obviously i came across the xenoblade series at some point, as 1-3 all have received varying levels of acclaim (especially 1 and 3) and i was immediately drawn to the aesthetics of the worlds they play in. nevertheless i kinda bounced off of 2 when i tried to play it, put off by the combination of staggering amounts of anime bullshit(tm) and graphics compromises made to keep the game running on the switch (a truly remarkable combination of blurry and oversharpened).</p>
 <p>i gave the series another try with 1 and can happily report that i have not bounced off of it this time. this is helped by the fact that the anime bullshit(tm) isn't really present at all in 1 (it still feels like a shonen anime at times, but at least the awful sexual humor is mostly absent). the blurry mess unfortunately is still there. this game was initially released for the wii (and then for the 3ds, which still boggles my mind, given that its game world has expansive open areas with big draw distances and a lot of verticality for some) and while the switch remaster got some model and texture upgrades, it still didn't manage to make the jump to hd. given how the graphics look, it shouldn't need to crank down the resolution to run stable on the switch, but it does.</p>
 <p>that doesn't completely negate the fact that the game world has some really beautiful and captivating areas and the sense of scale here is still impressive. the unique concept - the continents of this world are two extremely large giants that died in battle with each other and have entire societies living upon their dead bodies - is really cool and you can feel this scale in several of the world's areas.</p>
-<figure>
-    <img src="/img/xenoblade_1.png" alt="shulk, the main protagonist, a blonde white guy stands by a lake at night. across the sky are colorful auroras and equally colorful shooting stars. there are several floating islands up in the air.">
-    <figcaption>if it isn't drowned out by the blurriness, the game world has some really beautiful spots</figcaption>
-</figure>
+<figure><picture><source type="image/avif" srcset="/img/GGo0FsqVdw-764.avif 764w"><source type="image/webp" srcset="/img/GGo0FsqVdw-764.webp 764w"><img loading="lazy" decoding="async" src="/img/GGo0FsqVdw-764.png" alt="shulk, the main protagonist, a blonde white guy stands by a lake at night. across the sky are colorful auroras and equally colorful shooting stars. there are several floating islands up in the air." width="764" height="430"></picture><figcaption>if it isn't drowned out by the blurriness, the game world has some really beautiful spots</figcaption></figure>
 <p>at the face of it, it's a game that doesn't respect your time. until you unlock fast-travel points in the big maps, you have to trudge along at a fairly slow walking speed (there's no sprint and no mounts to speed things up, just an auto-walking toggle to keep you going straight ahead without pressing a button) and it's filled to the brim with optional busywork in a remarkable way. there are 475 (four hundred and seventy five) side quests in this game, which mostly fall into one of these three categories:</p>
 <ul>
 <li>collect x amount of a specific item</li>
@@ -723,30 +947,31 @@ pre[class*="language-diff-"] {
 <li>collect x amount of a specific monster's loot</li>
 </ul>
 <p>aside from being very checklist-y, they are complicated by the fact that some items have abysmal spawn rates and some monster loot has abysmal drop rates. at least the game marks the specific locations of items to collect - if they are even spawned right now and that specific quest is tracked - but it's still a big grind. some quests do involve actual bits of side stories for npc. those are pretty basic and the npcs remain fairly one-dimensional, but they're also endearing. trope-y but still nice. at the same time, the game clearly doesn't expect you to do all of these side quests. just mostly following along keeping my list of open side quests not too big and picking up all new ones i see i'm currently always around 5 levels above where the game expects me to be. i can't help it, i see side quests no matter how menial, i have to do them.</p>
-<figure>
-    <img src="/img/xenoblade_2.png" alt="a close-up of the character riki, a fluffy, small, very round, sentient hamster-like creature. he's winking with one eye and throwing up a peace sign like a cute anime girl.">
-    <figcaption>this is a 40 year-old man with 7 children</figcaption>
-</figure>
+<figure><picture><source type="image/avif" srcset="/img/u0wc00OvfJ-764.avif 764w"><source type="image/webp" srcset="/img/u0wc00OvfJ-764.webp 764w"><img loading="lazy" decoding="async" src="/img/u0wc00OvfJ-764.png" alt="a close-up of the character riki, a fluffy, small, very round, sentient hamster-like creature. he's winking with one eye and throwing up a peace sign like a cute anime girl." width="764" height="430"></picture><figcaption>this is a 40 year-old man with 7 children</figcaption></figure>
 <p>at 40 hours in, i still don't feel like i have a great grasp on the battle system. you control one character in a party of three (out of in the end 7 possible party members) and can freely choose who to control - but are locked into that for span of a fight at least - yet i never switched out the main protagonist shulk so far. once you're in battle, the character auto-attacks and you control the positioning and a list of special abilities to trigger. i barely do anything tactical here, essentially i just spam my abilities once their cooldown is through and maybe attempt to reposition for attacks that are more effective when executed from behind and stuff like that. i don't think i'm grasping the intricacies of the battle system at all, but since i'm constantly overleveled, i'm making my way through fights without issue at all.</p>
 <p>it's still too early for me to comment on the story except that it has me intrigued even if i don't expect anything groundbreaking from it. i'm not sure if the game is brave enough to challenge shulk's status as a straightforward chosen hero in the story, but i'm willing to see where it goes.</p>
 <p>it's a very different experience from playing silksong (obviously). where silksong is a very stressful yet oftentimes rewarding experience, xenoblade chronicles instead is a relaxing time, with lower mental bandwidth needed to jump in after an already stressful day. you can just run around for a few hours, tick some boxes for collected items, beat up some monsters while mostly just menu-ing through your special abilities and watch some lengthy cutscenes. it's comfort food.</p>
 <h2 id="conclusion">conclusion</h2>
 <p>if you're still here, hi. this was a longer-than-expected stream-of-consciousness write-up about the two games i'm currently playing. there's no great structure here and nothing to connect them, it's just rambly thoughts. hope it wasn't too boring and semi-coherent. thanks for reading.</p>
 
-<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/2025_10_15_lets_go/">webbed site - now with less content</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/2025_12_15_christmas_gaming_bonanza/">christmas vacation gaming bonanza</a></li>
+	</div>
+</div>
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/2025_10_15_lets_go/">webbed site - now with less content</a></li><li class="links-nextprev-next">Next →<br><a href="/log/books/mistborn_the_final_empire/">mistborn / the final empire</a></li>
 </ul>
 
-				</heading-anchors>
-			</main>
+			</heading-anchors>
+		</main>
 
-			<footer>
-				<p>
-					<em>Built with <a href="https://www.11ty.dev/">Eleventy v3.1.2</a></em>
-				</p>
-			</footer>
-		<div>
+		<footer>
+			<p>
+				<a href="/archive">Archive</a>
+			</p>
+			<p>
+				<em>Built with <a href="https://www.11ty.dev/">Eleventy v3.1.6</a></em>
+			</p>
+		</footer>
 
-		<!-- This page `/blog/2025_11_02_xenoblade_silksong/` was built on 2026-02-09T21:58:24.467Z -->
-		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
-	</div></div></body>
+		<!-- This page `/blog/2025_11_02_xenoblade_silksong/` was built on 2026-07-16T18:55:23.305Z -->
+		<script type="module" src="/dist/cC8wS6ZjFU.js"></script>
+	</body>
 </html>

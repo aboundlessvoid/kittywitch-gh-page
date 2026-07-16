@@ -3,64 +3,8 @@
 	
 		
 		<url>
-			<loc>https://kittywitch.space/about/</loc>
-			<lastmod>2025-08-27</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://kittywitch.space/archive/</loc>
-			<lastmod>2025-08-27</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://kittywitch.space/</loc>
-			<lastmod>2025-08-27</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://kittywitch.space/tags/</loc>
-			<lastmod>2025-08-27</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://kittywitch.space/thoughts/</loc>
-			<lastmod>2025-08-28</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://kittywitch.space/creations/</loc>
-			<lastmod>2025-08-28</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://kittywitch.space/sillies/</loc>
-			<lastmod>2025-08-28</lastmod>
-		</url>
-	
-	
-		
-		<url>
 			<loc>https://kittywitch.space/blog/2025_10_15_lets_go/</loc>
 			<lastmod>2025-10-15</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://kittywitch.space/reviews/</loc>
-			<lastmod>2025-10-19</lastmod>
 		</url>
 	
 	
@@ -73,35 +17,21 @@
 	
 		
 		<url>
-			<loc>https://kittywitch.space/reviews/mistborn_the_final_empire/</loc>
+			<loc>https://kittywitch.space/log/books/mistborn_the_final_empire/</loc>
 			<lastmod>2025-11-04</lastmod>
 		</url>
 	
 	
 		
 		<url>
-			<loc>https://kittywitch.space/log_2025/</loc>
-			<lastmod>2025-11-16</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://kittywitch.space/log/</loc>
-			<lastmod>2025-11-16</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://kittywitch.space/reviews/lost_in_transit/</loc>
+			<loc>https://kittywitch.space/log/games/lost_in_transit/</loc>
 			<lastmod>2025-11-23</lastmod>
 		</url>
 	
 	
 		
 		<url>
-			<loc>https://kittywitch.space/reviews/katabasis/</loc>
+			<loc>https://kittywitch.space/log/books/katabasis/</loc>
 			<lastmod>2025-11-30</lastmod>
 		</url>
 	
@@ -115,21 +45,21 @@
 	
 		
 		<url>
-			<loc>https://kittywitch.space/reviews/the_well_of_ascension/</loc>
+			<loc>https://kittywitch.space/log/books/the_well_of_ascension/</loc>
 			<lastmod>2025-12-15</lastmod>
 		</url>
 	
 	
 		
 		<url>
-			<loc>https://kittywitch.space/reviews/mouthwashing/</loc>
+			<loc>https://kittywitch.space/log/games/mouthwashing/</loc>
 			<lastmod>2025-12-29</lastmod>
 		</url>
 	
 	
 		
 		<url>
-			<loc>https://kittywitch.space/reviews/the_hero_of_ages/</loc>
+			<loc>https://kittywitch.space/log/books/the_hero_of_ages/</loc>
 			<lastmod>2025-12-31</lastmod>
 		</url>
 	
@@ -143,64 +73,148 @@
 	
 		
 		<url>
-			<loc>https://kittywitch.space/reviews/whos_lila/</loc>
+			<loc>https://kittywitch.space/log/games/whos_lila/</loc>
 			<lastmod>2026-01-01</lastmod>
 		</url>
 	
 	
 		
 		<url>
-			<loc>https://kittywitch.space/reviews/the_alloy_of_law/</loc>
+			<loc>https://kittywitch.space/log/books/the_alloy_of_law/</loc>
 			<lastmod>2026-01-05</lastmod>
 		</url>
 	
 	
 		
 		<url>
-			<loc>https://kittywitch.space/log_2026/</loc>
-			<lastmod>2026-01-05</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://kittywitch.space/reviews/girl_flesh/</loc>
+			<loc>https://kittywitch.space/log/books/girl_flesh/</loc>
 			<lastmod>2026-01-10</lastmod>
 		</url>
 	
 	
 		
 		<url>
-			<loc>https://kittywitch.space/reviews/what_feasts_at_night/</loc>
+			<loc>https://kittywitch.space/log/books/what_feasts_at_night/</loc>
 			<lastmod>2026-01-10</lastmod>
 		</url>
 	
 	
 		
 		<url>
-			<loc>https://kittywitch.space/reviews/serious_weakness/</loc>
+			<loc>https://kittywitch.space/log/books/serious_weakness/</loc>
 			<lastmod>2026-01-22</lastmod>
 		</url>
 	
 	
 		
 		<url>
-			<loc>https://kittywitch.space/reviews/negative_space/</loc>
+			<loc>https://kittywitch.space/log/books/negative_space/</loc>
 			<lastmod>2026-02-09</lastmod>
 		</url>
 	
 	
 		
 		<url>
-			<loc>https://kittywitch.space/reviews/shadows_of_self/</loc>
+			<loc>https://kittywitch.space/log/books/shadows_of_self/</loc>
 			<lastmod>2026-02-09</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://kittywitch.space/about/</loc>
+			<lastmod>2026-07-10</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://kittywitch.space/archive/</loc>
+			<lastmod>2026-07-10</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://kittywitch.space/</loc>
+			<lastmod>2026-07-10</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://kittywitch.space/tags/</loc>
+			<lastmod>2026-07-10</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://kittywitch.space/now/</loc>
+			<lastmod>2026-07-10</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://kittywitch.space/goals/</loc>
+			<lastmod>2026-07-10</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://kittywitch.space/blog/</loc>
+			<lastmod>2026-07-10</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://kittywitch.space/log/</loc>
+			<lastmod>2026-07-10</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://kittywitch.space/log/books/</loc>
+			<lastmod>2026-07-10</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://kittywitch.space/log/games/</loc>
+			<lastmod>2026-07-10</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://kittywitch.space/sillies/</loc>
+			<lastmod>2026-07-10</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://kittywitch.space/lists/mixtapes/summer_daze/</loc>
+			<lastmod>2026-07-16</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://kittywitch.space/lists/</loc>
+			<lastmod>2026-07-16</lastmod>
 		</url>
 	
 	
 		
 		<url>
 			<loc>https://kittywitch.space/feed/feed.xml</loc>
-			<lastmod>2026-02-09</lastmod>
+			<lastmod>2026-07-16</lastmod>
 		</url>
 	
 </urlset>
